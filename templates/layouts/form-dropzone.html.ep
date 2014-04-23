@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>ACTICVE-MEMORY-ANALYTICS</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="/bootstrap/js/d3/d3.min.js"></script>    
+<link href="/bootstrap/css/dense.css" rel="stylesheet">
+
+<div id="header">
+  <div class="wrapper">
+    <h1 id="logo"><a href=".">active-memory</a></h1>
+
+    <form id="form-source" >
+      <input type="text" id="source" placeholder="URL or Twitter @handle…">
+    </form>
+
+    <form id="form">
+      <input type="text" id="keyword" placeholder="Keyword…">
+      <label for="reverse" style="font-size: small"><input id="reverse" type="checkbox"> reverse tree</label>
+      <label for="phrase-line" style="font-size: small"><input id="phrase-line" type="checkbox"> one phrase per line</label>
+    </form>
+  </div>
+</div>
+<div id="help-left">
+  Shift-click to make that word the root.
+</div>
+
+<div id="vis"></div>
+<div id="text"></div>
+<div id="heat"></div>
+
+<div class="clear"></div>
+
+<div id="help-window">
+  <div class="help-wrapper">
+    <div id="examples" class="wrapper">
+      <div class="clear"></div>
+    </div>
+  </div>
+
+  <div class="help-wrapper grey">
+    <div class="wrapper">
+      <h2>Paste Text</h2>
+      <p><textarea id="paste"></textarea>
+      <p><button id="paste-go" class="first last" >Generate WordTree!</button>
+      <label for="paste-save"><input type="checkbox" id="paste-save"> Make public for easy sharing</label>
+      
+    </div>
+  </div>
+
+  <div class="wrapper">
+    
+  </div>
+
+  <div class="help-wrapper grey credits">
+
+  </div>
+</div>
+<script>
+
+
+var Base64 = {
+ 
+	// private property
+	_keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+ 
+	// public method for encoding
+	encode : function (input) {
+		var output = "";
+		var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+		var i = 0;
+ 
+		input = Base64._utf8_encode(input);
+ 
+		while (i < input.length) {
+ 
+			chr1 = input.charCodeAt(i++);
+			chr2 = input.charCodeAt(i++);
+			chr3 = input.charCodeAt(i++);
+ 
+			enc1 = chr1 >> 2;
+			enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+			enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+			enc4 = chr3 & 63;
+ 
+			if (isNaN(chr2)) {
+				enc3 = enc4 = 64;
+			} else if (isNaN(chr3)) {
+				enc4 = 64;
+			}
+ 
+			output = output +
+			this._keyStr.charAt(enc1) + this._keyStr.charAt(enc2) +
+			this._keyStr.charAt(enc3) + this._keyStr.charAt(enc4);
+ 
+		}
+ 
+		return output;
+	},
+ 
+	// public method for decoding
+	decode : function (input) {
+		var output = "";
+		var chr1, chr2, chr3;
+		var enc1, enc2, enc3, enc4;
+		var i = 0;
+ 
+		input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+ 
+		while (i < input.length) {
+ 
+			enc1 = this._keyStr.indexOf(input.charAt(i++));
+			enc2 = this._keyStr.indexOf(input.charAt(i++));
+			enc3 = this._keyStr.indexOf(input.charAt(i++));
+			enc4 = this._keyStr.indexOf(input.charAt(i++));
+ 
+			chr1 = (enc1 << 2) | (enc2 >> 4);
+			chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+			chr3 = ((enc3 & 3) << 6) | enc4;
+ 
+			output = output + String.fromCharCode(chr1);
+ 
+			if (enc3 != 64) {
+				output = output + String.fromCharCode(chr2);
+			}
+			if (enc4 != 64) {
+				output = output + String.fromCharCode(chr3);
+			}
+ 
+		}
+ 
+		output = Base64._utf8_decode(output);
+ 
+		return output;
+ 
+	},
+ 
+	// private method for UTF-8 encoding
+	_utf8_encode : function (string) {
+		string = string.replace(/\r\n/g,"\n");
+		var utftext = "";
+ 
+		for (var n = 0; n < string.length; n++) {
+ 
+			var c = string.charCodeAt(n);
+ 
+			if (c < 128) {
+				utftext += String.fromCharCode(c);
+			}
+			else if((c > 127) && (c < 2048)) {
+				utftext += String.fromCharCode((c >> 6) | 192);
+				utftext += String.fromCharCode((c & 63) | 128);
+			}
+			else {
+				utftext += String.fromCharCode((c >> 12) | 224);
+				utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+				utftext += String.fromCharCode((c & 63) | 128);
+			}
+ 
+		}
+ 
+		return utftext;
+	},
+ 
+	// private method for UTF-8 decoding
+	_utf8_decode : function (utftext) {
+		var string = "";
+		var i = 0;
+		var c = c1 = c2 = 0;
+ 
+		while ( i < utftext.length ) {
+ 
+			c = utftext.charCodeAt(i);
+ 
+			if (c < 128) {
+				string += String.fromCharCode(c);
+				i++;
+			}
+			else if((c > 191) && (c < 224)) {
+				c2 = utftext.charCodeAt(i+1);
+				string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+				i += 2;
+			}
+			else {
+				c2 = utftext.charCodeAt(i+1);
+				c3 = utftext.charCodeAt(i+2);
+				string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+				i += 3;
+			}
+ 
+		}
+ 
+		return string;
+	}
+ 
+}
+
+var count = 0;
+function addButton() {
+  var a = document.createElement('a');
+  a.textContent = 'New' + (++count);
+  a.href = '#';
+  a.setAttribute('onclick', 'addButton()');
+  document.querySelector('nav').appendChild(a);
+  return false;
+}
+</script>
+
+	  
+		
+    
+
+<script>
+
+var examples = [{name: "bob-00000", url: "http://aa.usno.navy.mil/imagery/moon/live"},
+{name: "bob-00001", url: "http://aa.usno.navy.mil/imagery/earth/live"},
+{name: "bob-00002", url: "app/pack.html"},
+{name: "bob-00003", url: "out.html"},
+{name: "bob-00000", url: "http://santex.github.io/AI-MicroStructure/idx004.html"},
+{name: "bob-00001", url: "app/index.html"},
+{name: "bob-00002", url: "app/pack.html"},
+{name: "bob-00003", url: "out.html"},
+{name: "bob-00004", url: "http://localhost/ai/lib/plug/player/playlist.html"},
+{name: "bob-00005", url: "app/bundle.html"},
+{name: "bob-00006", url: "app/airports-all.html"},
+{name: "bob-00017", url: "app/patent-suits.html"},
+{name: "bob-00018", url: "app/airports.html"},
+{name: "bob-00019", url: "app/azimuthal.html"},
+{name: "bob-00010", url: "app/bar-hierarchy.html"},
+{name: "bob-00011", url: "app/chord.html"},
+{name: "bob-00012", url: "app/cluster.html"},
+{name: "bob-00013", url: "app/collision.html"},
+{name: "bob-00014", url: "app/force-collapsible.html"},
+{name: "bob-00015", url: "app/pack-hierarchy.html"},
+{name: "bob-00016", url: "app/azimuthal.html"},
+{name: "bob-00017", url: "app/bar-hierarchy.html"},
+{name: "bob-00018", url: "app/chord.html"},
+{name: "bob-00019", url: "app/cluster.html"},
+{name: "bob-00020", url: "app/collision.html"},
+{name: "bob-00021", url: "app/force-collapsible.html"},
+{name: "bob-00022", url: "app/azimuthal.html"}];
+
+      
+
+
+function shuffle(array) {
+  var m = array.length, t, i;
+
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
+
+d3.select("#examples").selectAll(".example")
+    .data(shuffle(examples).slice(0,10))
+  .enter().append("div").attr("class", "thumb")
+	.text(function(d) { return d.url; })
+	.attr("style","padding:5px;margin:10px;text-align:center;border: dotted #000 1px;font-weight:bold;")	
+	.append("a")
+    .attr("href", function(d) { return d.url; })
+	.attr("target","new")
+	.append("img")
+	.attr("style","padding:5px;display:block;height:100px")	
+    .attr("src", function(d) { return "app/img/ex/" + d.name + ".jpg"; 
+		
+
+});
+
+</script>
+
+
+<script src="/bootstrap/js/d3.min.js"></script>    
+<script src="/bootstrap/js/longscroll.js"></script>
+<script src="/bootstrap/js/wordtree.js"></script>
+<script src="/bootstrap/js/unicode.js"></script>
+<script src="/bootstrap/js/app.js"></script>
+
+
+<script>
+function encode_as_img_and_link(){
+ // Add some critical information
+ $("svg").attr({ version: '1.1' , xmlns:"http://www.w3.org/2000/svg"});
+
+ var svg = $("#vid").html();
+ var b64 = Base64.encode(svg);
+
+ // Works in recent Webkit(Chrome)
+ $("body").append($("<img src='data:image/svg+xml;base64,\n"+b64+"' alt='file.svg'/>"));
+
+ // Works in Firefox 3.6 and Webit and possibly any browser which supports the data-uri
+ $("body").append($("<a href-lang='image/svg+xml' href='data:image/svg+xml;base64,\n"+b64+"' title='file.svg'>Download</a>"));
+}
+
+
+
+//setInterval(10,function{});
+
+
+
+</script>
+  
+
+  </body>
+
+
+</html>

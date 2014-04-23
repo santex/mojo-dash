@@ -1,0 +1,435 @@
+[Fri Jan 17 15:03:18 2014] [debug] Reading config file "/root/repos/mojo-dashboard/index.conf".
+Can't create listen socket: IO::Socket::INET: Die Adresse wird bereits verwendet at /usr/local/share/perl/5.14.2/Mojo/IOLoop.pm line 119.
+[Fri Jan 17 20:33:26 2014] [debug] Reading config file "/root/repos/mojo-dashboard/index.conf".
+[Fri Jan 17 20:33:26 2014] [info] Listening at "http://*:3001".
+[Fri Jan 17 20:33:26 2014] [info] Manager 14152 started.
+Server available at http://127.0.0.1:3001.
+[Fri Jan 17 20:33:26 2014] [info] Creating process id file "/tmp/prefork.pid".
+[Fri Jan 17 20:33:26 2014] [debug] Worker 14153 started.
+[Fri Jan 17 20:33:26 2014] [debug] Worker 14154 started.
+[Fri Jan 17 20:33:26 2014] [debug] Worker 14155 started.
+[Fri Jan 17 20:33:26 2014] [debug] Worker 14156 started.
+[Fri Jan 17 20:34:37 2014] [debug] Reading config file "/root/repos/mojo-dashboard/index.conf".
+[Fri Jan 17 20:34:37 2014] [info] Listening at "http://space-man.de:3002".
+[Fri Jan 17 20:34:37 2014] [info] Manager 14167 started.
+Server available at http://space-man.de:3002.
+[Fri Jan 17 20:34:37 2014] [debug] Worker 14169 started.
+[Fri Jan 17 20:34:37 2014] [debug] Worker 14170 started.
+[Fri Jan 17 20:34:37 2014] [debug] Worker 14172 started.
+[Fri Jan 17 20:34:37 2014] [debug] Worker 14171 started.
+[Fri Jan 17 20:35:41 2014] [debug] Reading config file "/root/repos/mojo-dashboard/index.conf".
+Can't create listen socket: IO::Socket::INET: Die Adresse wird bereits verwendet at /usr/local/share/perl/5.14.2/Mojo/IOLoop.pm line 119.
+[Tue Feb 18 20:06:50 2014] [debug] Reading config file "/root/repos/mojo-dashboard/index.conf".
+[Tue Feb 18 20:06:50 2014] [info] Listening at "http://space-man.de:3002".
+[Tue Feb 18 20:06:50 2014] [info] Manager 21252 started.
+Server available at http://space-man.de:3002.
+[Tue Feb 18 20:06:50 2014] [info] Creating process id file "/tmp/prefork.pid".
+[Tue Feb 18 20:06:50 2014] [debug] Worker 21254 started.
+[Tue Feb 18 20:06:50 2014] [debug] Worker 21256 started.
+[Tue Feb 18 20:06:50 2014] [debug] Worker 21253 started.
+[Tue Feb 18 20:06:50 2014] [debug] Worker 21255 started.
+[Tue Feb 18 20:06:52 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Feb 18 20:06:52 2014] [debug] GET "/".
+[Tue Feb 18 20:06:52 2014] [debug] Rendering template "index.html.ep".
+[Tue Feb 18 20:06:52 2014] [debug] Rendering template "layouts/index.html.ep".
+[Tue Feb 18 20:06:52 2014] [debug] 200 OK (0.098705s, 10.131/s).
+[Tue Feb 18 20:06:52 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Feb 18 20:06:53 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Feb 18 20:06:53 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Feb 18 20:06:53 2014] [debug] GET "/bootstrap/css/navbar.css".
+[Tue Feb 18 20:06:53 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:53 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:53 2014] [debug] Rendering inline template.
+[Tue Feb 18 20:06:53 2014] [debug] Rendering inline template.
+[Tue Feb 18 20:06:53 2014] [debug] 404 Not Found (0.036451s, 27.434/s).
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/avatar@2x.jpg".
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/avatar2@2x.jpg".
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/avatar3@2x.jpg".
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/avatar5@2x.jpg".
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering inline template.
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.023646s, 42.290/s).
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/uparrow@2x.png".
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering inline template.
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.031340s, 31.908/s).
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.079059s, 12.649/s).
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.093646s, 10.679/s).
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.092724s, 10.785/s).
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/avatar4@2x.jpg".
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.007198s, 138.927/s).
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/downarrow@2x.png".
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.008862s, 112.841/s).
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/browser-chrome-big@2x.png".
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/browser-firefox-big@2x.png".
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/browser-ie@2x.png".
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/browser-safari@2x.png".
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.027242s, 36.708/s).
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.019746s, 50.643/s).
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.029374s, 34.044/s).
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.015873s, 63.000/s).
+[Tue Feb 18 20:06:59 2014] [debug] HEAD "/bootstrap/img/browser-opera@2x.png".
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.007178s, 139.315/s).
+[Tue Feb 18 20:06:59 2014] [debug] GET "/bootstrap/ico/favicon.png".
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] Rendering cached inline template.
+[Tue Feb 18 20:06:59 2014] [debug] 404 Not Found (0.009038s, 110.644/s).
+[Tue Feb 18 20:10:48 2014] [debug] Reading config file "/root/repos/mojo-dashboard/index.conf".
+[Tue Feb 18 20:10:48 2014] [info] Listening at "http://space-man.de:3002".
+[Tue Feb 18 20:10:48 2014] [info] Manager 21300 started.
+Server available at http://space-man.de:3002.
+[Tue Feb 18 20:10:48 2014] [debug] Worker 21307 started.
+[Tue Feb 18 20:10:48 2014] [debug] Worker 21308 started.
+[Tue Feb 18 20:10:48 2014] [debug] Worker 21310 started.
+[Tue Feb 18 20:10:48 2014] [debug] Worker 21309 started.
+[Tue Feb 18 20:13:25 2014] [debug] Reading config file "/root/repos/mojo-dashboard/index.conf".
+[Tue Feb 18 20:13:25 2014] [info] Listening at "http://space-man.de:3002".
+[Tue Feb 18 20:13:25 2014] [info] Manager 21383 started.
+Server available at http://space-man.de:3002.
+[Tue Feb 18 20:13:25 2014] [debug] Worker 21393 started.
+[Tue Feb 18 20:13:25 2014] [debug] Worker 21392 started.
+[Tue Feb 18 20:13:25 2014] [debug] Worker 21391 started.
+[Tue Feb 18 20:13:25 2014] [debug] Worker 21390 started.
+[Tue Feb 18 20:16:11 2014] [debug] Reading config file "/root/repos/mojo-dashboard/index.conf".
+[Tue Feb 18 20:16:11 2014] [info] Listening at "http://space-man.de:3002".
+[Tue Feb 18 20:16:11 2014] [info] Manager 21426 started.
+Server available at http://space-man.de:3002.
+[Tue Feb 18 20:16:11 2014] [debug] Worker 21433 started.
+[Tue Feb 18 20:16:11 2014] [debug] Worker 21435 started.
+[Tue Feb 18 20:16:11 2014] [debug] Worker 21434 started.
+[Tue Feb 18 20:16:11 2014] [debug] Worker 21436 started.
+[Tue Feb 18 20:21:26 2014] [debug] Reading config file "/root/repos/mojo-dashboard/index.conf".
+[Tue Feb 18 20:21:26 2014] [info] Listening at "http://space-man.de:3002".
+[Tue Feb 18 20:21:26 2014] [info] Manager 21501 started.
+Server available at http://space-man.de:3002.
+[Tue Feb 18 20:21:26 2014] [debug] Worker 21508 started.
+[Tue Feb 18 20:21:26 2014] [debug] Worker 21510 started.
+[Tue Feb 18 20:21:26 2014] [debug] Worker 21509 started.
+[Tue Feb 18 20:21:26 2014] [debug] Worker 21511 started.
+[Mon Feb 24 23:04:06 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Feb 24 23:04:06 2014] [debug] GET "/".
+[Mon Feb 24 23:04:06 2014] [debug] Rendering template "index.html.ep".
+[Mon Feb 24 23:04:06 2014] [debug] Rendering template "layouts/index.html.ep".
+[Mon Feb 24 23:04:06 2014] [debug] 200 OK (0.062330s, 16.044/s).
+[Mon Feb 24 23:04:06 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Feb 24 23:04:06 2014] [debug] GET "/bootstrap/css/navbar.css".
+[Mon Feb 24 23:04:06 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Feb 24 23:04:06 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Feb 24 23:04:06 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Feb 24 23:04:06 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Feb 24 23:04:06 2014] [debug] Rendering inline template.
+[Mon Feb 24 23:04:06 2014] [debug] Rendering inline template.
+[Mon Feb 24 23:04:06 2014] [debug] 404 Not Found (0.065670s, 15.228/s).
+[Tue Feb 25 20:15:04 2014] [debug] GET "/".
+[Tue Feb 25 20:15:04 2014] [debug] Rendering template "index.html.ep".
+[Tue Feb 25 20:15:04 2014] [debug] Rendering template "layouts/index.html.ep".
+[Tue Feb 25 20:15:04 2014] [debug] 200 OK (0.047605s, 21.006/s).
+[Tue Feb 25 20:15:04 2014] [debug] GET "/bootstrap/css/navbar.css".
+[Tue Feb 25 20:15:04 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 25 20:15:04 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 25 20:15:04 2014] [debug] Rendering inline template.
+[Tue Feb 25 20:15:04 2014] [debug] Rendering inline template.
+[Tue Feb 25 20:15:04 2014] [debug] 404 Not Found (0.062090s, 16.106/s).
+[Tue Feb 25 20:15:12 2014] [debug] GET "/page-inbox.html".
+[Tue Feb 25 20:15:12 2014] [debug] Rendering template "page-inbox.html.ep".
+[Tue Feb 25 20:15:12 2014] [debug] GET "/bootstrap/ico/favicon.png".
+[Tue Feb 25 20:15:12 2014] [debug] Rendering template "layouts/page-inbox.html.ep".
+[Tue Feb 25 20:15:12 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 25 20:15:12 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 25 20:15:12 2014] [debug] Rendering inline template.
+[Tue Feb 25 20:15:12 2014] [debug] Rendering inline template.
+[Tue Feb 25 20:15:12 2014] [debug] 404 Not Found (0.048154s, 20.767/s).
+[Tue Feb 25 20:15:12 2014] [debug] 200 OK (0.084017s, 11.902/s).
+[Tue Feb 25 20:15:15 2014] [debug] GET "/page-inbox.html".
+[Tue Feb 25 20:15:15 2014] [debug] Rendering template "page-inbox.html.ep".
+[Tue Feb 25 20:15:15 2014] [debug] Rendering template "layouts/page-inbox.html.ep".
+[Tue Feb 25 20:15:15 2014] [debug] 200 OK (0.046414s, 21.545/s).
+[Tue Feb 25 20:15:19 2014] [debug] GET "/charts-flot.html".
+[Tue Feb 25 20:15:19 2014] [debug] Rendering template "charts-flot.html.ep".
+[Tue Feb 25 20:15:19 2014] [debug] Rendering template "layouts/charts-flot.html.ep".
+[Tue Feb 25 20:15:19 2014] [debug] 200 OK (0.082471s, 12.125/s).
+[Tue Feb 25 20:15:25 2014] [debug] GET "/gallery".
+[Tue Feb 25 20:15:25 2014] [debug] Rendering template "gallery.html.ep".
+[Tue Feb 25 20:15:25 2014] [debug] Rendering template "layouts/gallery.html.ep".
+[Tue Feb 25 20:15:25 2014] [debug] 200 OK (0.070434s, 14.198/s).
+[Tue Feb 25 20:15:25 2014] [debug] GET "/bootstrap/img/avatar2.png".
+[Tue Feb 25 20:15:25 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 25 20:15:25 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 25 20:15:25 2014] [debug] GET "/bootstrap/img/avatar3.png".
+[Tue Feb 25 20:15:25 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:15:25 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:15:25 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 25 20:15:25 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 25 20:15:25 2014] [debug] Rendering inline template.
+[Tue Feb 25 20:15:25 2014] [debug] GET "/bootstrap/img/avatar5.png".
+[Tue Feb 25 20:15:25 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 25 20:15:25 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 25 20:15:25 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:15:25 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:15:26 2014] [debug] 404 Not Found (0.047148s, 21.210/s).
+[Tue Feb 25 20:15:26 2014] [debug] GET "/bootstrap/img/avatar4.png".
+[Tue Feb 25 20:15:26 2014] [debug] Rendering inline template.
+[Tue Feb 25 20:15:26 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 25 20:15:26 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 25 20:15:26 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:15:26 2014] [debug] 404 Not Found (0.051583s, 19.386/s).
+[Tue Feb 25 20:15:26 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:15:26 2014] [debug] 404 Not Found (0.041632s, 24.020/s).
+[Tue Feb 25 20:15:26 2014] [debug] 404 Not Found (0.091830s, 10.890/s).
+[Tue Feb 25 20:15:30 2014] [debug] GET "/charts-others".
+[Tue Feb 25 20:15:30 2014] [debug] Rendering template "charts-others.html.ep".
+[Tue Feb 25 20:15:30 2014] [debug] Rendering template "layouts/charts-others.html.ep".
+[Tue Feb 25 20:15:30 2014] [debug] 200 OK (0.043762s, 22.851/s).
+[Tue Feb 25 20:15:44 2014] [debug] GET "/charts-others".
+[Tue Feb 25 20:15:44 2014] [debug] Rendering template "charts-others.html.ep".
+[Tue Feb 25 20:15:44 2014] [debug] Rendering template "layouts/charts-others.html.ep".
+[Tue Feb 25 20:15:44 2014] [debug] 200 OK (0.038742s, 25.812/s).
+[Tue Feb 25 20:15:53 2014] [debug] GET "/index".
+[Tue Feb 25 20:15:53 2014] [debug] Rendering template "index.html.ep".
+[Tue Feb 25 20:15:53 2014] [debug] Rendering template "layouts/index.html.ep".
+[Tue Feb 25 20:15:54 2014] [debug] 200 OK (0.082232s, 12.161/s).
+[Tue Feb 25 20:15:54 2014] [debug] GET "/bootstrap/css/navbar.css".
+[Tue Feb 25 20:15:54 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 25 20:15:54 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 25 20:15:54 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:15:54 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:15:54 2014] [debug] 404 Not Found (0.014789s, 67.618/s).
+[Tue Feb 25 20:15:55 2014] [debug] GET "/index".
+[Tue Feb 25 20:15:55 2014] [debug] Rendering template "index.html.ep".
+[Tue Feb 25 20:15:55 2014] [debug] Rendering template "layouts/index.html.ep".
+[Tue Feb 25 20:15:55 2014] [debug] 200 OK (0.040030s, 24.981/s).
+[Tue Feb 25 20:15:55 2014] [debug] GET "/bootstrap/css/navbar.css".
+[Tue Feb 25 20:15:55 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 25 20:15:55 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 25 20:15:55 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:15:55 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:15:55 2014] [debug] 404 Not Found (0.008680s, 115.207/s).
+[Tue Feb 25 20:16:34 2014] [debug] GET "/charts-flot".
+[Tue Feb 25 20:16:34 2014] [debug] Rendering template "charts-flot.html.ep".
+[Tue Feb 25 20:16:34 2014] [debug] Rendering template "layouts/charts-flot.html.ep".
+[Tue Feb 25 20:16:34 2014] [debug] 200 OK (0.030104s, 33.218/s).
+[Tue Feb 25 20:16:40 2014] [debug] GET "/charts-xcharts".
+[Tue Feb 25 20:16:40 2014] [debug] Rendering template "charts-xcharts.html.ep".
+[Tue Feb 25 20:16:40 2014] [debug] Rendering template "layouts/charts-xcharts.html.ep".
+[Tue Feb 25 20:16:40 2014] [debug] 200 OK (0.035622s, 28.073/s).
+[Tue Feb 25 20:17:02 2014] [debug] GET "/charts-others".
+[Tue Feb 25 20:17:02 2014] [debug] Rendering cached template "charts-others.html.ep".
+[Tue Feb 25 20:17:02 2014] [debug] Rendering cached template "layouts/charts-others.html.ep".
+[Tue Feb 25 20:17:02 2014] [debug] 200 OK (0.001290s, 775.194/s).
+[Tue Feb 25 20:19:03 2014] [debug] GET "/charts-flot".
+[Tue Feb 25 20:19:03 2014] [debug] Rendering template "charts-flot.html.ep".
+[Tue Feb 25 20:19:03 2014] [debug] Rendering template "layouts/charts-flot.html.ep".
+[Tue Feb 25 20:19:03 2014] [debug] 200 OK (0.034587s, 28.913/s).
+[Tue Feb 25 20:19:24 2014] [debug] GET "/charts-others".
+[Tue Feb 25 20:19:24 2014] [debug] Rendering cached template "charts-others.html.ep".
+[Tue Feb 25 20:19:24 2014] [debug] Rendering cached template "layouts/charts-others.html.ep".
+[Tue Feb 25 20:19:24 2014] [debug] 200 OK (0.001319s, 758.150/s).
+[Tue Feb 25 20:19:31 2014] [debug] GET "/charts-flot".
+[Tue Feb 25 20:19:31 2014] [debug] Rendering cached template "charts-flot.html.ep".
+[Tue Feb 25 20:19:31 2014] [debug] Rendering cached template "layouts/charts-flot.html.ep".
+[Tue Feb 25 20:19:31 2014] [debug] 200 OK (0.001294s, 772.798/s).
+[Tue Feb 25 20:19:32 2014] [debug] GET "/charts-xcharts".
+[Tue Feb 25 20:19:32 2014] [debug] Rendering cached template "charts-xcharts.html.ep".
+[Tue Feb 25 20:19:32 2014] [debug] Rendering cached template "layouts/charts-xcharts.html.ep".
+[Tue Feb 25 20:19:32 2014] [debug] 200 OK (0.001221s, 819.001/s).
+[Tue Feb 25 20:19:58 2014] [debug] GET "/index".
+[Tue Feb 25 20:19:58 2014] [debug] Rendering cached template "index.html.ep".
+[Tue Feb 25 20:19:58 2014] [debug] Rendering cached template "layouts/index.html.ep".
+[Tue Feb 25 20:19:58 2014] [debug] 200 OK (0.001638s, 610.501/s).
+[Tue Feb 25 20:19:58 2014] [debug] GET "/bootstrap/css/navbar.css".
+[Tue Feb 25 20:19:58 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 25 20:19:58 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 25 20:19:58 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:19:58 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:19:58 2014] [debug] 404 Not Found (0.007247s, 137.988/s).
+[Tue Feb 25 20:21:33 2014] [debug] GET "/charts-xcharts.html".
+[Tue Feb 25 20:21:33 2014] [debug] Rendering template "charts-xcharts.html.ep".
+[Tue Feb 25 20:21:33 2014] [debug] Rendering template "layouts/charts-xcharts.html.ep".
+[Tue Feb 25 20:21:33 2014] [debug] 200 OK (0.061770s, 16.189/s).
+[Tue Feb 25 20:21:39 2014] [debug] GET "/charts-others".
+[Tue Feb 25 20:21:39 2014] [debug] Rendering cached template "charts-others.html.ep".
+[Tue Feb 25 20:21:39 2014] [debug] Rendering cached template "layouts/charts-others.html.ep".
+[Tue Feb 25 20:21:39 2014] [debug] 200 OK (0.001427s, 700.771/s).
+[Tue Feb 25 20:35:48 2014] [debug] GET "/login".
+[Tue Feb 25 20:35:48 2014] [debug] Rendering template "login.html.ep".
+[Tue Feb 25 20:35:48 2014] [debug] Rendering template "layouts/login.html.ep".
+[Tue Feb 25 20:35:48 2014] [debug] 200 OK (0.033437s, 29.907/s).
+[Tue Feb 25 20:35:51 2014] [debug] GET "/bootstrap/ico/favicon.png".
+[Tue Feb 25 20:35:51 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Feb 25 20:35:51 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Feb 25 20:35:51 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:35:51 2014] [debug] Rendering cached inline template.
+[Tue Feb 25 20:35:51 2014] [debug] 404 Not Found (0.015921s, 62.810/s).
+[Wed Feb 26 01:11:44 2014] [debug] GET "/".
+[Wed Feb 26 01:11:44 2014] [debug] Rendering cached template "index.html.ep".
+[Wed Feb 26 01:11:44 2014] [debug] Rendering cached template "layouts/index.html.ep".
+[Wed Feb 26 01:11:44 2014] [debug] 200 OK (0.002158s, 463.392/s).
+[Wed Feb 26 01:11:44 2014] [debug] GET "/bootstrap/css/navbar.css".
+[Wed Feb 26 01:11:44 2014] [debug] Template "not_found.development.html.ep" not found.
+[Wed Feb 26 01:11:44 2014] [debug] Template "not_found.html.ep" not found.
+[Wed Feb 26 01:11:44 2014] [debug] Rendering cached inline template.
+[Wed Feb 26 01:11:44 2014] [debug] Rendering cached inline template.
+[Wed Feb 26 01:11:44 2014] [debug] 404 Not Found (0.008564s, 116.768/s).
+[Wed Feb 26 01:11:45 2014] [debug] GET "/bootstrap/ico/favicon.png".
+[Wed Feb 26 01:11:45 2014] [debug] Template "not_found.development.html.ep" not found.
+[Wed Feb 26 01:11:45 2014] [debug] Template "not_found.html.ep" not found.
+[Wed Feb 26 01:11:45 2014] [debug] Rendering cached inline template.
+[Wed Feb 26 01:11:45 2014] [debug] Rendering cached inline template.
+[Wed Feb 26 01:11:45 2014] [debug] 404 Not Found (0.008132s, 122.971/s).
+[Wed Feb 26 01:13:49 2014] [debug] GET "/charts-xcharts.html".
+[Wed Feb 26 01:13:49 2014] [debug] Rendering template "charts-xcharts.html.ep".
+[Wed Feb 26 01:13:49 2014] [debug] Rendering template "layouts/charts-xcharts.html.ep".
+[Wed Feb 26 01:13:49 2014] [debug] 200 OK (0.029761s, 33.601/s).
+[Wed Feb 26 01:13:54 2014] [debug] GET "/charts-others".
+[Wed Feb 26 01:13:54 2014] [debug] Rendering template "charts-others.html.ep".
+[Wed Feb 26 01:13:54 2014] [debug] Rendering template "layouts/charts-others.html.ep".
+[Wed Feb 26 01:13:54 2014] [debug] 200 OK (0.038796s, 25.776/s).
+[Wed Feb 26 18:54:05 2014] [debug] GET "/".
+[Wed Feb 26 18:54:05 2014] [debug] Rendering cached template "index.html.ep".
+[Wed Feb 26 18:54:05 2014] [debug] Rendering cached template "layouts/index.html.ep".
+[Wed Feb 26 18:54:05 2014] [debug] 200 OK (0.003049s, 327.976/s).
+[Wed Feb 26 18:54:05 2014] [debug] GET "/bootstrap/css/navbar.css".
+[Wed Feb 26 18:54:05 2014] [debug] Template "not_found.development.html.ep" not found.
+[Wed Feb 26 18:54:05 2014] [debug] Template "not_found.html.ep" not found.
+[Wed Feb 26 18:54:05 2014] [debug] Rendering cached inline template.
+[Wed Feb 26 18:54:05 2014] [debug] Rendering cached inline template.
+[Wed Feb 26 18:54:05 2014] [debug] 404 Not Found (0.013764s, 72.653/s).
+[Wed Feb 26 18:54:09 2014] [debug] GET "/bootstrap/ico/favicon.png".
+[Wed Feb 26 18:54:09 2014] [debug] Template "not_found.development.html.ep" not found.
+[Wed Feb 26 18:54:09 2014] [debug] Template "not_found.html.ep" not found.
+[Wed Feb 26 18:54:09 2014] [debug] Rendering cached inline template.
+[Wed Feb 26 18:54:09 2014] [debug] Rendering cached inline template.
+[Wed Feb 26 18:54:09 2014] [debug] 404 Not Found (0.009420s, 106.157/s).
+[Wed Feb 26 18:54:15 2014] [debug] GET "/charts-xcharts.html".
+[Wed Feb 26 18:54:15 2014] [debug] Rendering cached template "charts-xcharts.html.ep".
+[Wed Feb 26 18:54:15 2014] [debug] Rendering cached template "layouts/charts-xcharts.html.ep".
+[Wed Feb 26 18:54:15 2014] [debug] 200 OK (0.001560s, 641.026/s).
+[Wed Feb 26 18:54:37 2014] [debug] GET "/charts-xcharts.html".
+[Wed Feb 26 18:54:37 2014] [debug] Rendering template "charts-xcharts.html.ep".
+[Wed Feb 26 18:54:37 2014] [debug] Rendering template "layouts/charts-xcharts.html.ep".
+[Wed Feb 26 18:54:37 2014] [debug] 200 OK (0.047891s, 20.881/s).
+[Wed Feb 26 18:54:59 2014] [debug] GET "/charts-others".
+[Wed Feb 26 18:54:59 2014] [debug] Rendering template "charts-others.html.ep".
+[Wed Feb 26 18:54:59 2014] [debug] Rendering template "layouts/charts-others.html.ep".
+[Wed Feb 26 18:54:59 2014] [debug] 200 OK (0.049560s, 20.178/s).
+[Wed Feb 26 18:55:03 2014] [debug] GET "/charts-flot".
+[Wed Feb 26 18:55:03 2014] [debug] Rendering template "charts-flot.html.ep".
+[Wed Feb 26 18:55:03 2014] [debug] Rendering template "layouts/charts-flot.html.ep".
+[Wed Feb 26 18:55:04 2014] [debug] 200 OK (0.052470s, 19.059/s).
+[Wed Feb 26 18:55:07 2014] [debug] GET "/charts-flot".
+[Wed Feb 26 18:55:07 2014] [debug] Rendering cached template "charts-flot.html.ep".
+[Wed Feb 26 18:55:07 2014] [debug] Rendering cached template "layouts/charts-flot.html.ep".
+[Wed Feb 26 18:55:07 2014] [debug] 200 OK (0.001252s, 798.722/s).
+[Wed Feb 26 18:55:14 2014] [debug] GET "/charts-xcharts".
+[Wed Feb 26 18:55:14 2014] [debug] Rendering template "charts-xcharts.html.ep".
+[Wed Feb 26 18:55:14 2014] [debug] Rendering template "layouts/charts-xcharts.html.ep".
+[Wed Feb 26 18:55:14 2014] [debug] 200 OK (0.030799s, 32.469/s).
+[Wed Feb 26 18:55:17 2014] [debug] GET "/charts-others".
+[Wed Feb 26 18:55:17 2014] [debug] Rendering cached template "charts-others.html.ep".
+[Wed Feb 26 18:55:17 2014] [debug] Rendering cached template "layouts/charts-others.html.ep".
+[Wed Feb 26 18:55:17 2014] [debug] 200 OK (0.001488s, 672.043/s).
+[Fri Feb 28 07:34:08 2014] [debug] GET "/".
+[Fri Feb 28 07:34:08 2014] [debug] Rendering cached template "index.html.ep".
+[Fri Feb 28 07:34:08 2014] [debug] Rendering cached template "layouts/index.html.ep".
+[Fri Feb 28 07:34:08 2014] [debug] 200 OK (0.002327s, 429.738/s).
+[Fri Feb 28 07:34:09 2014] [debug] GET "/bootstrap/css/navbar.css".
+[Fri Feb 28 07:34:09 2014] [debug] Template "not_found.development.html.ep" not found.
+[Fri Feb 28 07:34:09 2014] [debug] Template "not_found.html.ep" not found.
+[Fri Feb 28 07:34:09 2014] [debug] Rendering cached inline template.
+[Fri Feb 28 07:34:09 2014] [debug] Rendering cached inline template.
+[Fri Feb 28 07:34:09 2014] [debug] 404 Not Found (0.015184s, 65.859/s).
+[Fri Feb 28 07:34:10 2014] [debug] GET "/bootstrap/ico/favicon.png".
+[Fri Feb 28 07:34:10 2014] [debug] Template "not_found.development.html.ep" not found.
+[Fri Feb 28 07:34:10 2014] [debug] Template "not_found.html.ep" not found.
+[Fri Feb 28 07:34:10 2014] [debug] Rendering cached inline template.
+[Fri Feb 28 07:34:10 2014] [debug] Rendering cached inline template.
+[Fri Feb 28 07:34:10 2014] [debug] 404 Not Found (0.009092s, 109.987/s).
+[Fri Feb 28 09:16:01 2014] [debug] GET "/charts-others".
+[Fri Feb 28 09:16:01 2014] [debug] Rendering cached template "charts-others.html.ep".
+[Fri Feb 28 09:16:01 2014] [debug] Rendering cached template "layouts/charts-others.html.ep".
+[Fri Feb 28 09:16:01 2014] [debug] 200 OK (0.002138s, 467.727/s).
+[Fri Feb 28 11:05:23 2014] [debug] GET "/bootstrap/ico/favicon.png".
+[Fri Feb 28 11:05:23 2014] [debug] Template "not_found.development.html.ep" not found.
+[Fri Feb 28 11:05:23 2014] [debug] Template "not_found.html.ep" not found.
+[Fri Feb 28 11:05:23 2014] [debug] Rendering cached inline template.
+[Fri Feb 28 11:05:23 2014] [debug] Rendering cached inline template.
+[Fri Feb 28 11:05:23 2014] [debug] 404 Not Found (0.008317s, 120.236/s).
+[Tue Mar  4 08:31:28 2014] [debug] Reading config file "/root/repos/mojo-dashboard/index.conf".
+[Tue Mar  4 08:31:28 2014] [info] Listening at "http://space-man.de:3002".
+[Tue Mar  4 08:31:28 2014] [info] Manager 10901 started.
+Server available at http://space-man.de:3002.
+[Tue Mar  4 08:31:28 2014] [debug] Worker 10905 started.
+[Tue Mar  4 08:31:28 2014] [debug] Worker 10903 started.
+[Tue Mar  4 08:31:28 2014] [debug] Worker 10904 started.
+[Tue Mar  4 08:31:28 2014] [debug] Worker 10902 started.
+[Tue Mar  4 18:09:21 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Mar  4 18:09:21 2014] [debug] GET "/".
+[Tue Mar  4 18:09:21 2014] [debug] Rendering template "index.html.ep".
+[Tue Mar  4 18:09:21 2014] [debug] Rendering template "layouts/index.html.ep".
+[Tue Mar  4 18:09:21 2014] [debug] 200 OK (0.094387s, 10.595/s).
+[Tue Mar  4 18:09:22 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Mar  4 18:09:22 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Mar  4 18:09:22 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Mar  4 18:09:22 2014] [debug] GET "/bootstrap/css/navbar.css".
+[Tue Mar  4 18:09:22 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Mar  4 18:09:22 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Mar  4 18:09:22 2014] [debug] Rendering inline template.
+[Tue Mar  4 18:09:22 2014] [debug] Rendering inline template.
+[Tue Mar  4 18:09:22 2014] [debug] 404 Not Found (0.029588s, 33.797/s).
+[Tue Mar  4 18:09:24 2014] [debug] GET "/bootstrap/ico/favicon.png".
+[Tue Mar  4 18:09:24 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Mar  4 18:09:24 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Mar  4 18:09:24 2014] [debug] Rendering cached inline template.
+[Tue Mar  4 18:09:24 2014] [debug] Rendering cached inline template.
+[Tue Mar  4 18:09:24 2014] [debug] 404 Not Found (0.007871s, 127.049/s).
+[Tue Mar  4 18:09:32 2014] [debug] GET "/charts-xcharts.html".
+[Tue Mar  4 18:09:32 2014] [debug] Rendering template "charts-xcharts.html.ep".
+[Tue Mar  4 18:09:32 2014] [debug] Rendering template "layouts/charts-xcharts.html.ep".
+[Tue Mar  4 18:09:32 2014] [debug] 200 OK (0.032475s, 30.793/s).
+[?1049h[1;24r(B[m[4l[?7h[H[2JEvery 30,0s: perl feed.pl BUY;perl feed.pl ;[1;57HTue Mar 18 06:57:07 2014[3;1HTable (0,0):[4dERROR 1062 (23000) at line 1: Duplicate entry '80a9c14b881f72dc3e26c3825cc00198'[5;2Hfor key 'moreBucket'[6dERROR 1062 (23000) at line 1: Duplicate entry '971819200107e6e80a7f120f116e33da'[7;2Hfor key 'moreBucket'[8dERROR 1062 (23000) at line 1: Duplicate entry '22e83664608a25785d76936dcd197a52'[9;2Hfor key 'moreBucket'[10dERROR 1062 (23000) at line 1: Duplicate entry 'c047f7e9dce4a3d8beff67dd97716f05'[11;2Hfor key 'moreBucket'[12dERROR 1062 (23000) at line 1: Duplicate entry '93b6388335f84a917aa7faec3ebb36e1'[13;2Hfor key 'moreBucket'[14dERROR 1062 (23000) at line 1: Duplicate entry '7f019eb03a34b8c04c6e18432387564a'[15;2Hfor key 'moreBucket'[16dERROR 1062 (23000) at line 1: Duplicate entry '6469a5cb13f11e9748fa18d7e945132f'[17;2Hfor key 'moreBucket'[18dERROR 1062 (23000) at line 1: Duplicate entry '5589e23cf1055fc6dbceaafe0e28ea9f'[19;2Hfor key 'moreBucket'[20dERROR 1062 (23000) at line 1: Duplicate entry 'b26c3d40230499c919feca3022d64a91'[21;2Hfor key 'moreBucket'[22dERROR 1062 (23000) at line 1: Duplicate entry '066c5171922bfe397ef1caa950ff9245'[23;2Hfor key 'moreBucket'[24dERROR 1062 (23000) at line 1: Duplicate entry '9525063d5e7cde4aed427ab55d08996b[?7l'[?7h[1;74H42[24;80H[1;72H8:18[24;80H[1;74H53[24;80H[13;19r[19;1H[2S[1;24r[1;72H9:29[6;48H22e83664608a25785d76936dcd197a52[8;48H971819200107e6e80a7f120f116e33da[18dERROR 1062 (23000) at line 1: Duplicate entry '7f019eb03a34b8c04c6e18432387564a'[19;2Hfor key 'moreBucket'[24;80H[1;69H7:00:05[24;80H[13;19r[13;1H[2T[1;24r[1;74H40[13d for key 'moreBucket'[14dERROR 1062 (23000) at line 1: Duplicate entry '7f019eb03a34b8c04c6e18432387564a'[24;80H[4;11r[4;1H[2T[1;24r[1;72H1:15[4dERROR 1062 (23000) at line 1: Duplicate entry 'dc869003a79dba80efa717ab5a0a69f3'[5;2Hfor key 'moreBucket'[24;80H[1;74H53[24;80H[19d[2L[9;15r[9;1H[2T[1;24r[1;72H2:30[9d for key 'moreBucket'[10dERROR 1062 (23000) at line 1: Duplicate entry '971819200107e6e80a7f120f116e33da'[19;2Hfor key 'moreBucket'[20dERROR 1062 (23000) at line 1: Duplicate entry '7f019eb03a34b8c04c6e18432387564a'[24;80H[15;21r[15;1H[2T[1;24r[1;72H3:05[15d for key 'moreBucket'[16dERROR 1062 (23000) at line 1: Duplicate entry '7f019eb03a34b8c04c6e18432387564a'[24;80H[1;74H44[24;80H[15;21r[21;1H[2S[1;24r[1;72H4:19[20dERROR 1062 (23000) at line 1: Duplicate entry '7f019eb03a34b8c04c6e18432387564a'[21;2Hfor key 'moreBucket'[24;80H[13d[4L[1;74H54[13d for key 'moreBucket'[14dERROR 1062 (23000) at line 1: Duplicate entry '30f68f6bc834ac575c49e3eef9eab16b'[15;2Hfor key 'moreBucket'[16dERROR 1062 (23000) at line 1: Duplicate entry '1e42e52fc90ef572f9a5cd3ce441931d'[24;80H[1;72H5:30[24;80H[1;72H6:06[24;80H[1;74H42[24;80H[19d[2L[1;72H7:18[8;48H971819200107e6e80a7f120f116e33da[12;48H22e83664608a25785d76936dcd197a52[19d for key 'moreBucket'[20dERROR 1062 (23000) at line 1: Duplicate entry '7f019eb03a34b8c04c6e18432387564a'[24;80H[1;74H54[24;80H[1;72H8:29[24;80H[1;72H9:05[24;80H[1;74H42[24;80H[1;71H10:18[24;80H[1;74H53[24;80H[7d[J[1;72H1:29[4dNot an ARRAY reference at feed.pl line 36.[K[5dTable (0,1):[K[6dNot an ARRAY reference at feed.pl line 36.[K[24;80H[1;72H2:06[24;80H[1;74H40[24;80H[1;72H3:14[24;80H[1;74H48[4dERROR 1062 (23000) at line 1: Duplicate entry '2f2aa0138b16903cb8cfdc1b9448f37b'[5;1H for key 'moreBucket'[6dERROR 1062 (23000) at line 1: Duplicate entry '6cd37b2f5de5c55d2c4e69416eec8b4b'[7;2Hfor key 'moreBucket'[8dERROR 1062 (23000) at line 1: Duplicate entry 'abb74b4d929f892ef8618cfb23b04cac'[9;2Hfor key 'moreBucket'[10dERROR 1062 (23000) at line 1: Duplicate entry '8d2caec0f19d4ced53e80786196047b8'[11;2Hfor key 'moreBucket'[12dERROR 1062 (23000) at line 1: Duplicate entry '8d2caec0f19d4ced53e80786196047b8'[13;2Hfor key 'moreBucket'[14dERROR 1062 (23000) at line 1: Duplicate entry '9ac705a62a3ba3ddc8aff4352b0719cf'[15;2Hfor key 'moreBucket'[16dERROR 1062 (23000) at line 1: Duplicate entry 'c3d4ae1ff2813ecc39efa4290a6b32ec'[17;2Hfor key 'moreBucket'[18dERROR 1062 (23000) at line 1: Duplicate entry '07ebecd7f3771744fae8ee32cebd09f7'[19;2Hfor key 'moreBucket'[20dERROR 1062 (23000) at line 1: Duplicate entry '8a4edefde125973b5213cb313b22f501'[21;2Hfor key 'moreBucket'[22dERROR 1062 (23000) at line 1: Duplicate entry '662df38aafe3f21a7e448dcace4702ce'[23;2Hfor key 'moreBucket'[24dERROR 1062 (23000) at line 1: Duplicate entry 'a48b70b87b76f8751c309a908253bc10[?7l'[?7h[5d[J[1;72H4:23[4dTable (0,1):[K[24;80H[1;72H5:0[24;80H[1;74H41[24;80H[1;72H6:19[24;80H[1;74H56[24;80H[1;72H7:33[24;80H[1;72H8:10[24;80H[1;74H47[24;80H[1;72H9:23[24;80H[1;71H20:00[24;80H[1;74H37[3dProblem loading URL "https://www.bitcoin.de/en/market". (Couldn't connect: Der N[4;1Hame oder der Dienst ist nicht bekannt)[5dProblem loading URL "https://www.bitcoin.de/en/market". (Couldn't connect: Der N[6;1Hame oder der Dienst ist nicht bekannt)[24;80H[1;72H1:08[24;80H[1;74H3[24;80H[1;72H2:09[24;80H[1;74H3[24;80H[1;72H3:10[24;80H[1;74H4[24;80H[1;72H4:1[24;80H[1;74H41[24;80H[24;1H[?1049l[?1l>[?1049h[1;24r(B[m[4l[?7h[H[2JEvery 30,0s: perl feed.pl BUY; perl feed.pl;[1;57HTue Mar 18 19:25:43 2014[3;1HTable (0,0):[4dTable (0,1):[24;80H[1;72H6:19[24;80H[1;74H56[24;80H[1;72H7:32[24;80H[1;72H8:09[24;80H[1;74H47[24;80H[1;72H9:25[24;80H[1;71H30:03[24;80H[1;74H39[24;80H[1;72H1:16[24;80H[1;74H53[24;80H[1;72H2:31[4dProblem loading URL "https://www.bitcoin.de/en/market". (Connect timeout)[24;80H[1;72H3:17[4dTable (0,1):[K[24;80H[1;74H54[24;80H[1;72H4:31[24;80H[1;72H5:09[24;80H[1;74H45[24;80H[1;72H6:21[24;80H[1;74H57[24;80H[1;72H7:33[24;80H[1;72H8:09[24;80H[1;74H45[24;80H[1;72H9:22[24;80H[1;74H58[24;80H[1;71H40:34[24;80H[1;72H1:09[24;80H[1;74H48[24;80H[1;72H2:25[24;80H[1;72H3:02[24;80H[1;74H39[24;80H[1;72H4:16[24;80H[1;74H52[24;80H[1;72H5:29[24;80H[1;72H6:07[24;80H[1;74H43[24;80H[1;72H7:19[24;80H[1;74H55[24;80H[1;72H8:31[24;80H[1;72H9:07[24;80H[1;74H44[24;80H[1;71H50:22[24;80H[1;74H59[24;80H[1;72H1:37[24;80H[1;72H2:13[24;80H[1;74H50[24;80H[1;72H3:28[24;80H[1;72H4:06[24;80H[1;74H44[24;80H[1;72H5:20[24;80H[1;74H57[24;80H[1;72H6:34[24;80H[1;72H7:12[24;80H[1;74H53[24;80H[1;72H8:31[24;80H[1;72H9:08[24;80H[1;74H51[24;80H[1;68H20:00:28[24;80H[1;72H1:05[24;80H[1;74H4[24;80H[1;72H2:29[24;80H[1;72H3:06[24;80H[1;74H43[24;80H[1;72H4:19[24;80H[1;74H56[24;80H[1;72H5:37[24;80H[1;72H6:13[24;80H[1;74H56[24;80H[1;72H7:35[24;80H[1;72H8:14[4dProblem loading URL "https://www.bitcoin.de/en/market". (Premature connection cl[5;1Hose)[24;80H[5d[J[1;74H48[4dTable (0,1):[K[24;80H[1;72H9:33[24;80H[1;71H10:10[24;80H[1;74H47[24;80H[1;72H1:2[24;80H[1;72H2:14[24;80H[1;74H55[24;80H[1;72H3:34[24;80H[1;72H4:11[24;80H[1;74H47[24;80H[1;72H5:23[24;80H[1;72H6:00[24;80H[1;74H38[24;80H[1;72H7:14[24;80H[1;74H50[24;80H[1;72H8:27[24;80H[1;72H9:04[24;80H[1;74H40[24;80H[1;71H20:16[24;80H[1;74H52[24;80H[1;72H1:28[24;80H[1;72H2:04[24;80H[1;74H40[24;80H[1;72H3:15[24;80H[1;74H51[24;80H[1;72H4:27[24;80H[1;72H5:03[24;80H[1;74H39[24;80H[1;72H6:16[24;80H[1;74H52[24;80H[1;72H7:28[24;80H[1;72H8:04[24;80H[1;74H40[24;80H[1;72H9:15[24;80H[1;74H51[24;80H[1;71H30:27[24;80H[1;72H1:04[24;80H[1;74H41[24;80H[1;72H2:17[24;80H[1;74H53[24;80H[1;72H3:29[24;80H[1;72H4:05[24;80H[1;74H42[24;80H[1;72H5:18[24;80H[1;74H55[24;80H[1;72H6:3[24;80H[1;72H7:11[24;80H[1;74H48[24;80H[1;72H8:24[24;80H[1;74H59[24;80H[1;72H9:35[24;80H[1;71H40:11[24;80H[1;74H47[24;80H[1;72H1:24[24;80H[1;72H2:00[24;80H[1;74H38[24;80H[1;72H3:15[24;80H[1;74H59[24;80H[1;72H4:41[24;80H[1;72H5:26[24;80H[1;72H6:04[24;80H[1;74H41[24;80H[1;72H7:17[24;80H[1;72H8:01[24;80H[1;74H43[24;80H[1;72H9:3[24;80H[1;71H50:22[24;80H[1;72H1:11[24;80H[1;74H56[24;80H[1;72H2:42[24;80H[1;72H3:35[24;80H[1;72H4:30[24;80H[1;72H5:16[24;80H[1;72H6:0[24;80H[1;74H55[24;80H[1;72H7:48[24;80H[1;72H8:41[24;80H[1;72H9:33[24;80H[1;69H1:00:08[24;80H[1;74H45[24;80H[1;72H1:23[24;80H[1;72H2:00[24;80H[1;74H36[24;80H[1;72H3:12[24;80H[1;74H48[24;80H[1;72H4:24[24;80H[1;72H5:01[24;80H[1;74H37[24;80H[1;72H6:13[24;80H[1;74H51[24;80H[1;72H7:27[24;80H[1;72H8:02[24;80H[1;74H39[24;80H[1;72H9:18[24;80H[1;74H54[24;80H[1;71H10:30[24;80H[1;72H1:06[24;80H[1;74H44[24;80H[1;72H2:20[24;80H[1;72H3:01[24;80H[1;74H40[24;80H[1;72H4:18[24;80H[1;74H5[24;80H[1;72H5:37[24;80H[1;72H6:14[24;80H[1;74H5[24;80H[1;72H7:33[24;80H[1;72H8:09[24;80H[1;74H48[24;80H[1;72H9:24[24;80H[1;71H20:01[24;80H[1;74H39[24;80H[1;72H1:16[24;80H[1;74H55[24;80H[1;72H2:33[24;80H[1;72H3:10[24;80H[1;74H51[24;80H[1;72H4:29[24;80H[1;72H5:04[24;80H[1;74H41[24;80H[1;72H6:19[24;80H[1;74H56[24;80H[1;72H7:35[24;80H[1;72H8:12[24;80H[1;74H49[24;80H[1;72H9:30[24;80H[1;71H30:07[24;80H[1;74H44[24;80H[1;72H1:20[24;80H[1;74H59[24;80H[1;72H2:35[24;80H[1;72H3:12[24;80H[1;74H49[24;80H[1;72H4:27[24;80H[1;72H5:03[24;80H[1;74H39[24;80H[1;72H6:15[24;80H[1;74H52[24;80H[1;72H7:28[24;80H[1;72H8:07[24;80H[1;74H44[24;80H[1;72H9:21[24;80H[1;74H56[24;80H[1;71H40:32[24;80H[1;72H1:08[24;80H[1;74H44[24;80H[1;72H2:20[24;80H[1;72H3:0[24;80H[1;74H36[24;80H[1;72H4:13[24;80H[1;74H49[24;80H[1;72H5:26[24;80H[1;72H6:02[24;80H[1;74H38[24;80H[1;72H7:14[24;80H[1;74H53[24;80H[1;72H8:30[24;80H[1;72H9:07[24;80H[1;74H42[24;80H[1;71H50:18[24;80H[1;74H54[24;80H[1;72H1:30[24;80H[1;72H2:05[24;80H[1;74H42[24;80H[1;72H3:19[24;80H[1;74H57[24;80H[1;72H4:33[24;80H[1;72H5:1[24;80H[1;74H52[24;80H[1;72H6:29[24;80H[1;72H7:0[24;80H[1;74H45[24;80H[1;72H8:21[24;80H[1;74H57[24;80H[1;72H9:32[24;80H[1;69H2:00:08[24;80H[1;74H44[24;80H[1;72H1:20[24;80H[1;74H56[24;80H[1;72H2:31[24;80H[1;72H3:08[24;80H[1;74H43[24;80H[1;72H4:21[24;80H[1;74H56[24;80H[1;72H5:33[24;80H[1;72H6:10[24;80H[1;74H45[24;80H[1;72H7:21[24;80H[1;74H57[24;80H[1;72H8:33[24;80H[1;72H9:09[24;80H[1;74H45[24;80H[1;71H10:20[24;80H[1;74H56[24;80H[1;72H1:32[24;80H[1;72H2:09[24;80H[1;74H46[24;80H[1;72H3:21[24;80H[1;74H57[24;80H[1;72H4:35[24;80H[1;72H5:12[24;80H[1;74H48[24;80H[1;72H6:24[24;80H[1;72H7:00[24;80H[1;74H38[24;80H[1;72H8:13[24;80H[1;74H49[24;80H[1;72H9:27[24;80H[1;71H20:03[24;80H[1;74H38[24;80H[1;72H1:16[24;80H[1;74H52[24;80H[1;72H2:29[24;80H[1;72H3:04[24;80H[1;74H40[24;80H[1;72H4:17[24;80H[1;74H54[24;80H[1;72H5:29[24;80H[1;72H6:05[24;80H[1;74H41[24;80H[1;72H7:16[24;80H[1;74H51[24;80H[1;72H8:27[24;80H[1;72H9:02[24;80H[1;74H38[24;80H[1;71H30:13[24;80H[1;74H50[24;80H[1;72H1:27[24;80H[1;72H2:02[24;80H[1;74H38[24;80H[1;72H3:15[24;80H[1;74H51[24;80H[1;72H4:27[24;80H[1;72H5:03[24;80H[1;74H38[24;80H[1;72H6:14[24;80H[1;74H50[24;80H[1;72H7:26[24;80H[1;72H8:01[24;80H[1;74H40[24;80H[1;72H9:16[24;80H[1;74H52[24;80H[1;71H40:28[24;80H[1;72H1:03[24;80H[1;74H39[24;80H[1;72H2:15[24;80H[1;74H52[24;80H[1;72H3:27[24;80H[1;72H4:03[24;80H[1;74H38[24;80H[1;72H5:16[24;80H[1;74H52[24;80H[1;72H6:28[24;80H[1;72H7:06[24;80H[1;74H41[24;80H[1;72H8:17[24;80H[1;74H53[24;80H[1;72H9:29[24;80H[1;71H50:05[24;80H[1;74H42[24;80H[1;72H1:17[24;80H[1;74H53[24;80H[1;72H2:29[24;80H[1;72H3:05[24;80H[1;74H43[24;80H[1;72H4:21[24;80H[1;74H57[24;80H[1;72H5:33[24;80H[1;72H6:09[24;80H[1;74H44[24;80H[1;72H7:20[24;80H[1;74H56[24;80H[1;72H8:31[24;80H[1;72H9:07[24;80H[1;74H42[24;80H[1;69H3:00:19[24;80H[1;74H54[24;80H[1;72H1:30[24;80H[1;72H2:06[24;80H[1;74H42[24;80H[1;72H3:18[24;80H[1;74H55[24;80H[1;72H4:31[24;80H[1;72H5:07[24;80H[1;74H43[24;80H[1;72H6:19[24;80H[1;74H57[24;80H[1;72H7:34[24;80H[1;72H8:10[24;80H[1;74H47[24;80H[1;72H9:23[24;80H[1;71H10:00[24;80H[1;74H35[24;80H[1;72H1:11[24;80H[1;74H48[24;80H[1;72H2:24[24;80H[1;72H3:00[24;80H[1;74H35[24;80H[1;72H4:11[24;80H[1;74H47[24;80H[1;72H5:23[24;80H[1;74H59[24;80H[1;72H6:34[24;80H[1;72H7:10[24;80H[1;74H45[24;80H[1;72H8:21[24;80H[1;74H57[24;80H[1;72H9:33[24;80H[1;71H20:09[24;80H[1;74H45[24;80H[1;72H1:21[24;80H[1;74H57[24;80H[1;72H2:32[24;80H[1;72H3:08[24;80H[1;74H44[24;80H[1;72H4:23[24;80H[1;74H59[24;80H[1;72H5:35[24;80H[1;72H6:11[24;80H[1;74H46[24;80H[1;72H7:24[24;80H[1;72H8:00[24;80H[1;74H36[24;80H[1;72H9:12[24;80H[1;74H48[24;80H[1;71H30:24[24;80H[1;72H1:00[24;80H[1;74H36[24;80H[1;72H2:1[24;80H[1;74H51[24;80H[1;72H3:27[24;80H[1;72H4:0[24;80H[1;74H42[24;80H[1;72H5:18[24;80H[1;74H54[24;80H[1;72H6:29[24;80H[1;72H7:08[24;80H[1;74H46[24;80H[1;72H8:22[24;80H[1;72H9:01[24;80H[1;74H36[24;80H[1;71H40:14[24;80H[1;74H50[24;80H[1;72H1:26[24;80H[1;72H2:02[24;80H[1;74H37[24;80H[1;72H3:13[24;80H[1;74H49[24;80H[1;72H4:25[24;80H[1;72H5:01[24;80H[1;74H36[24;80H[1;72H6:12[24;80H[1;74H48[24;80H[1;72H7:24[24;80H[1;74H59[24;80H[1;72H8:35[24;80H[1;72H9:11[24;80H[1;74H46[24;80H[1;71H50:22[24;80H[1;74H58[24;80H[1;72H1:34[24;80H[1;72H2:10[24;80H[1;74H46[24;80H[1;72H3:21[24;80H[1;74H57[24;80H[1;72H4:33[24;80H[1;72H5:08[24;80H[1;74H44[24;80H[1;72H6:20[24;80H[1;74H56[24;80H[1;72H7:31[24;80H[1;72H8:08[24;80H[1;74H44[24;80H[1;72H9:20[24;80H[1;74H56[24;80H[1;57HWed[66G9 00:00:31[24;80H[1;72H1:07[24;80H[1;74H43[24;80H[1;72H2:19[24;80H[1;74H55[24;80H[1;72H3:31[24;80H[1;72H4:07[24;80H[1;74H43[24;80H[1;72H5:18[24;80H[1;74H54[24;80H[1;72H6:30[24;80H[1;72H7:06[24;80H[1;74H42[24;80H[1;72H8:18[24;80H[1;74H54[24;80H[1;72H9:29[24;80H[1;71H10:08[24;80H[1;74H46[24;80H[1;72H1:25[24;80H[1;72H2:03[24;80H[1;74H4[24;80H[1;72H3:21[24;80H[1;74H59[24;80H[1;72H4:37[24;80H[1;72H5:16[4dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[5dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[6dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[7dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[8dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[9dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[10dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[11dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[12dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[13dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[14dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[15dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[16dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[17dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[18dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[19dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[20dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[21dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[22dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[23dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[24dERROR 1054 (42S22) at line 1: Unknown column 'id' in 'field list'[80G[5d[J[1;74H51[4dTable (0,1):[K[24;80H[1;72H6:28[24;80H[1;72H7:05[24;80H[1;74H42[24;80H[1;72H8:21[24;80H[1;72H9:00[24;80H[1;74H38[24;80H[1;71H20:17[24;80H[1;74H55[24;80H[1;72H1:34[24;80H[1;72H2:11[24;80H[1;74H50[24;80H[1;72H3:29[24;80H[1;72H4:07[24;80H[1;74H46[24;80H[1;72H5:24[24;80H[1;72H6:03[24;80H[1;74H41[24;80H[1;72H7:2[24;80H[1;74H59[24;80H[1;72H8:38[24;80H[1;72H9:17[24;80H[1;74H55[24;80H[1;71H30:37[24;80H[1;72H1:18[24;80H[24;1H[?1049l[?1l>[?1049h[1;24r(B[m[4l[?7h[H[2JEvery 120,0s: perl feed.pl BUY; perl feed.pl ;[1;57HThu Mar 20 10:05:00 2014[3;1HTable (0,0):[4dTable (0,1):[24;80H[1;72H7:1[24;80H[1;72H9:22[24;80H[1;71H11:3[24;80H[1;72H3:50[24;80H[1;72H6:0[24;80H[1;72H8:09[24;80H[1;71H20:18[24;80H[1;72H2:27[24;80H[1;72H4:36[24;80H[1;72H6:45[24;80H[1;72H8:54[24;80H[1;71H31:03[24;80H[1;72H3:12[24;80H[1;72H5:21[24;80H[1;72H7:30[24;80H[1;72H9:42[24;80H[1;71H41:51[24;80H[1;72H4:00[24;80H[1;72H6:1[24;80H[1;72H8:19[24;80H[1;71H50:28[24;80H[1;72H2:37[24;80H[1;72H4:46[24;80H[1;72H6:55[24;80H[1;72H9:04[24;80H[1;69H1:01:06[24;80H[1;72H3:07[24;80H[1;72H5:08[24;80H[1;72H7:09[24;80H[1;72H9:10[24;80H[1;71H11:12[24;80H[1;72H3:13[24;80H[1;72H5:14[24;80H[1;72H7:15[24;80H[1;72H9:16[24;80H[1;71H21:18[24;80H[1;72H3:19[24;80H[1;72H5:20[24;80H[1;72H7:3[24;80H[1;72H9:38[24;80H[1;71H31:4[24;80H[1;72H3:57[24;80H[1;72H6:0[24;80H

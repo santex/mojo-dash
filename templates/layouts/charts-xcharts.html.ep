@@ -1,0 +1,982 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta name="description" content="<%= $self->config->{app}->{description} %>">
+    <meta name="author" content="<%= $self->config->{app}->{author} %>">
+    <meta name="keyword" content="<%= $self->config->{app}->{keywords} %>">
+	<!-- end: Meta -->
+
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- end: Mobile Specific -->
+
+  <script src="/bootstrap/js/jquery.min.js"></script>
+	<link href="/bootstrap/js/smoothie.js" rel="stylesheet">
+
+	<!-- start: CSS -->
+	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/bootstrap/css/style.min.css" rel="stylesheet">
+	<link href="/bootstrap/css/retina.min.css" rel="stylesheet">
+	<!-- end: CSS -->
+
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  	<script src="http:/5shim.googlecode.com/svn/trunk5.js"></script>
+		<script src="/bootstrap/js/respond.min.js"></script>
+		<link href="/bootstrap/css/ie.css" rel="stylesheet">
+	<![endif]-->
+	
+	<!--[if IE 9]>
+		<link id="ie9style" href="/bootstrap/css/ie9.css" rel="stylesheet">
+	<![endif]-->
+	
+	<!-- start: Favicon and Touch Icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="/bootstrap/ico/favicon.png">
+	<!-- end: Favicon and Touch Icons -->
+	
+% if ( defined($self->config->{google_analytics_code} ) ){
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '<%= $self->config->{google_analytics_code}; %>']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+%}
+		
+		
+		
+</head>
+
+<body>
+		<!-- start: Header -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".sidebar-nav.nav-collapse">
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/index"><span>Acme, Inc</span></a>
+								
+				<!-- start: Header Menu -->
+				<div class="nav-no-collapse header-nav">
+					<ul class="nav pull-right">
+						<li class="dropdown hidden-xs">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="/index#">
+								<i class="halflings warning-sign white"></i>
+							</a>
+							<ul class="dropdown-menu notifications">
+								<li>
+									<span class="dropdown-menu-title">You have 11 notifications</span>
+								</li>	
+                            	<li>
+                                    <a href="/index#">
+										+ <i class="fa fa-user"></i> <span class="message">New user registration</span> <span class="time">1 min</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="/index#">
+										+ <i class="fa fa-comment-o"></i> <span class="message">New comment</span> <span class="time">7 min</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="/index#">
+										+ <i class="fa fa-comment-o"></i> <span class="message">New comment</span> <span class="time">8 min</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="/index#">
+										+ <i class="fa fa-comment-o"></i> <span class="message">New comment</span> <span class="time">16 min</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="/index#">
+										+ <i class="fa fa-user"></i> <span class="message">New user registration</span> <span class="time">36 min</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="/index#">
+										+ <i class="fa fa-shopping-cart"></i> <span class="message">2 items sold</span> <span class="time">1 hour</span> 
+                                    </a>
+                                </li>
+								<li class="warning">
+                                    <a href="/index#">
+										- <i class="fa fa-user"></i> <span class="message">User deleted account</span> <span class="time">2 hour</span> 
+                                    </a>
+                                </li>
+								<li class="warning">
+                                    <a href="/index#">
+										- <i class="fa fa-shopping-cart"></i> <span class="message">Transaction was canceled</span> <span class="time">6 hour</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="/index#">
+										+ <i class="fa fa-comment-o"></i> <span class="message">New comment</span> <span class="time">yesterday</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="/index#">
+										+ <i class="fa fa-user"></i> <span class="message">New user registration</span> <span class="time">yesterday</span> 
+                                    </a>
+                                </li>
+                                <li>
+                            		<a class="dropdown-menu-sub-footer">View all notifications</a>
+								</li>	
+							</ul>
+						</li>
+            
+						<!-- start: Notifications Dropdown -->
+						<li class="dropdown hidden-xs">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="/index#">
+								<i class="halflings tasks white"></i>
+							</a>
+							<ul class="dropdown-menu tasks">
+								<li>
+									<span class="dropdown-menu-title">You have 17 tasks in progress</span>
+                            	</li>
+								<li>
+                                    <a href="/index#">
+										<span class="header">
+											<span class="title">iOS Development</span>
+											<span class="percent"></span>
+										</span>
+                                        <div class="taskProgress progressSlim progressBlue">80</div> 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/index#">
+										<span class="header">
+											<span class="title">Android Development</span>
+											<span class="percent"></span>
+										</span>
+                                        <div class="taskProgress progressSlim progressBlue">47</div> 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/index#">
+										<span class="header">
+											<span class="title">Django Project For Google</span>
+											<span class="percent"></span>
+										</span>
+                                        <div class="taskProgress progressSlim progressBlue">32</div> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="/index#">
+										<span class="header">
+											<span class="title">SEO for new sites</span>
+											<span class="percent"></span>
+										</span>
+                                        <div class="taskProgress progressSlim progressBlue">63</div> 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/index#">
+										<span class="header">
+											<span class="title">New blog posts</span>
+											<span class="percent"></span>
+										</span>
+                                        <div class="taskProgress progressSlim progressBlue">80</div> 
+                                    </a>
+                                </li>
+								<li>
+                            		<a class="dropdown-menu-sub-footer">View all tasks</a>
+								</li>	
+							</ul>
+						</li>
+						<!-- end: Notifications Dropdown -->
+						<!-- start: Message Dropdown -->
+						<li class="dropdown hidden-xs">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="/index#">
+								<i class="halflings envelope white"></i>
+							</a>
+							<ul class="dropdown-menu messages">
+								<li>
+									<span class="dropdown-menu-title">You have 9 messages</span>
+								</li>	
+                            	<li>
+                                    <a href="/index#">
+										<span class="avatar"><img src="/bootstrap/img/avatar.jpg" alt="Avatar"></span>
+										<span class="header">
+											<span class="from">
+										    	santex
+										     </span>
+											<span class="time">
+										    	6 min
+										    </span>
+										</span>
+                                        <span class="message">
+                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                        </span>  
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/index#">
+										<span class="avatar"><img src="/bootstrap/img/avatar2.jpg" alt="Avatar"></span>
+										<span class="header">
+											<span class="from">
+										    	Megan Abott
+										     </span>
+											<span class="time">
+										    	56 min
+										    </span>
+										</span>
+                                        <span class="message">
+                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                        </span>  
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/index#">
+										<span class="avatar"><img src="/bootstrap/img/avatar3.jpg" alt="Avatar"></span>
+										<span class="header">
+											<span class="from">
+										    	Kate Ross
+										     </span>
+											<span class="time">
+										    	3 hours
+										    </span>
+										</span>
+                                        <span class="message">
+                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                        </span>  
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="/index#">
+										<span class="avatar"><img src="/bootstrap/img/avatar4.jpg" alt="Avatar"></span>
+										<span class="header">
+											<span class="from">
+										    	Julie Blank
+										     </span>
+											<span class="time">
+										    	yesterday
+										    </span>
+										</span>
+                                        <span class="message">
+                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                        </span>  
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/index#">
+										<span class="avatar"><img src="/bootstrap/img/avatar5.jpg" alt="Avatar"></span>
+										<span class="header">
+											<span class="from">
+										    	Jane Sanders
+										     </span>
+											<span class="time">
+										    	Jul 25, 2012
+										    </span>
+										</span>
+                                        <span class="message">
+                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                        </span>  
+                                    </a>
+                                </li>
+								<li>
+                            		<a class="dropdown-menu-sub-footer">View all messages</a>
+								</li>	
+							</ul>
+						</li>
+						<!-- end: Message Dropdown -->
+						<li>
+							<a class="btn" href="/index#">
+								<i class="halflings wrench white"></i>
+							</a>
+						</li>
+						<!-- start: User Dropdown -->
+						<li class="dropdown">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="/index#">
+								<i class="halflings user white"></i> santex
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="/index#"><i class="halflings user white"></i> Profile</a></li>
+								<li><a href="/login"><i class="halflings off white"></i> Logout</a></li>
+							</ul>
+						</li>
+						<!-- end: User Dropdown -->
+					</ul>
+				</div>
+				<!-- end: Header Menu -->
+				
+			</div>
+		</div>
+	</div>
+	<!-- start: Header -->
+
+
+
+	
+		<div class="container">
+
+
+
+		<div class="row">
+
+			<div id="sidebar-left" class="col-sm-1">
+				<div class="nav-collapse sidebar-nav collapse navbar-collapse bs-navbar-collapse">
+					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li><a href="/index"><i class="fa fa-bar-chart-o"></i><span class="hidden-sm"> Dashboard</span></a></li>	
+					
+						
+						<li><a href="/login"><i class="fa fa-lock"></i><span class="hidden-sm"> Login Page</span></a></li>
+					</ul>
+				</div>
+			</div><a id="main-menu-toggle" class="hidden-xs open"><i class="fa fa-bars"></i></a>
+			<!-- end: Main Menu -->
+
+
+
+
+
+                  
+<script type="text/javascript">
+$(function() {
+    $('.loader').click(function(event) {
+        event.preventDefault();
+        $('#content').load($(this).attr('href').replace("/index#",""));
+    }); 
+});
+</script>
+			
+			<!-- start: Content -->
+<div class="row">
+				
+				<div class="col-sm-12">
+					<div class="box">
+						<div class="box-header">
+							<h2><i class="fa fa-list-alt"></i><span class="break"></span>Realtime</h2>
+							<div class="box-icon">
+								<a href="/charts-flot#" class="btn-setting"><i class="fa fa-wrench"></i></a>
+								<a href="/charts-flot#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="/charts-flot#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>
+						</div>
+						<div class="box-content">
+							 <div id="realtimechart" style="height: 190px; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1358px; height: 190px;" width="1358" height="190"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 173px; left: 14px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 130px; left: 7px; text-align: right;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 87px; left: 7px; text-align: right;">50</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 44px; left: 7px; text-align: right;">75</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 0px; text-align: right;">100</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1358px; height: 190px;" width="1358" height="190"></canvas></div>
+							 <p>You can update a chart periodically to get a real-time effect by using a timer to insert the new data in the plot and redraw it.</p>
+							 <p>Time between updates: <input id="updateInterval" type="text" value="" style="text-align: right; width:5em"> milliseconds</p>
+						</div>
+					</div>
+				
+			</div>		<div class="row">
+				
+				<div class="col-sm-12">
+					<div class="box">
+						<div class="box-header">
+							<h2><i class="fa fa-list-alt"></i><span class="break"></span>Realtime</h2>
+							<div class="box-icon">
+								<a href="/charts-flot#" class="btn-setting"><i class="fa fa-wrench"></i></a>
+								<a href="/charts-flot#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="/charts-flot#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>
+						</div>
+						<div class="box-content">
+
+            </div>
+							 <p>You can update a chart periodically to get a real-time effect by using a timer to insert the new data in the plot and redraw it.</p>
+							 <p>Time between updates: <input id="updateInterval" type="text" value="" style="text-align: right; width:5em"> milliseconds</p>
+						</div>
+					</div>
+				</div><!--/col-->
+				
+			</div>			
+			
+			<div class="row" style="hight:400px;">
+        
+				<div class="stats-date col-md-3">
+					<div>Monthly Statistics</div>
+					<div class="range">02/10/2012 - 02/11/2012</div>
+				</div><!--/col-->
+				
+				<div class="stats col-md-9">
+					
+					<div class="stat">
+						<div class="left">
+							<div class="number green">1.324.996</div>
+							<div class="title"><span class="color green"></span> Visits</div>
+						</div>
+						<div class="right">	
+							<div class="arrow">
+								<img src="/bootstrap/img/uparrow.png">
+							</div>
+							<div class="percent">+13%</div>
+						</div>
+					</div>
+					
+					<div class="stat">
+						<div class="left">
+							<div class="number yellow">12.894.765</div>
+							<div class="title"><span class="color yellow"></span> Pageviews</div>
+						</div>
+						<div class="right">	
+							<div class="arrow">
+								<img src="/bootstrap/img/uparrow.png">
+							</div>
+							<div class="percent">+17%</div>
+						</div>
+					</div>
+					
+					<div class="stat">
+						<div class="left">
+							<div class="number blue">432.980</div>
+							<div class="title"><span class="color blue"></span>Visitors</div>
+						</div>
+						<div class="right">	
+							<div class="arrow">
+								<img src="/bootstrap/img/downarrow.png">
+							</div>
+							<div class="percent">-33%</div>
+						</div>
+					</div>
+					
+					<div class="stat">
+						<div class="left">
+							<div class="number red">11.324</div>
+							<div class="title"><span class="color red"></span>New Visitors</div>
+						</div>
+						<div class="right">	
+							<div class="arrow">
+								<img src="/bootstrap/img/uparrow.png">
+							</div>
+							<div class="percent">+3%</div>
+						</div>
+					</div>
+						
+				</div><!--/col-->
+			
+			</div><!--/row-->	
+
+			<div class="row">
+				
+				<div class="col-xs-12 overflow:hidden">
+				
+					<div id="stats-chart2" style="height:100px;" ></div>
+				
+				</div><!--/col-->	
+			
+			</div><!--/row-->
+			
+			<hr>
+			
+			<div class="row">
+				
+				<div class="widget col-md-5 col-sm-12">
+					
+					<h2><i class="glyphicons globe"></i> Trade Origion</h2>
+					
+					<hr>
+					
+					<div class="content">
+						
+						<div class="verticalChart">
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>37%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">US</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>16%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">PL</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>12%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">GB</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>9%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">DE</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>7%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">NL</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>6%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">CA</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>5%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">FI</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>4%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">RU</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>3%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">AU</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>1%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">N/A</div>
+							
+							</div>	
+							
+						</div>
+					
+					</div>
+					
+				</div><!--/col-->
+				
+				<div class="widget col-md-3 col-sm-6">
+					
+					<h2><span class="glyphicons pie_chart"><i></i></span> Currencys</h2>
+					
+					<hr>
+					
+					<div class="content">
+						
+						<div class="browserStat big">
+							<img src="/bootstrap/img/browser-chrome-big.png" alt="Chrome">
+							<span>34%</span>
+						</div>
+						<div class="browserStat big">
+							<img src="/bootstrap/img/browser-firefox-big.png" alt="Firefox">
+							<span>34%</span>
+						</div>
+						<div class="browserStat">
+							<img src="/bootstrap/img/browser-ie.png" alt="Internet Explorer">
+							<span>34%</span>
+						</div>
+						<div class="browserStat">
+							<img src="/bootstrap/img/browser-safari.png" alt="Safari">
+							<span>34%</span>
+						</div>
+						<div class="browserStat">
+							<img src="/bootstrap/img/browser-opera.png" alt="Opera">
+							<span>34%</span>
+						</div>	
+								
+						
+					</div>
+				</div><!--/col-->
+				
+				<div class="widget col-md-4 col-sm-6">
+					<h2><span class="glyphicons charts"><i></i></span> Weekly Stat</h2>
+					
+					<hr>
+					
+					<div class="content">
+            
+           </div><!-- End .sparkStats -->
+					</div>
+				</div><!--/col-->
+			
+			</div><!--/row-->
+			
+			<hr>
+			
+			<div class="row">
+				
+				<div class="widget col-sm-6 overflow:hidden">
+					<h2><span class="glyphicons charts"><i></i></span>UP Volume 24 Hours</h2>
+					<hr>
+					<div class="content">
+						<div id="facebookChart" style="height:100px;" ></div>
+					</div>
+				</div><!--/col-->
+				
+				<div class="widget col-sm-6 overflow:hidden">
+					<h2><span class="glyphicons charts"><i></i></span>Down Volume 24 Hours</h2>
+					<hr>
+					<div class="content">
+						<div id="twitterChart" style="height:100px;" ></div>
+					</div>
+				</div><!--/col-->
+			
+			</div><!--/row-->
+
+				
+			
+       
+					
+			</div>
+			<!-- end: Content -->
+			
+			<!-- start: Widgets Area -->
+<div id="widgets-area" class="col-sm-2">
+	
+	<ul class="nav tab-menu nav-tabs" id="myTab">
+		<li class="active"><a href="/index#charts"><i class="fa fa-bar-chart-o"></i></a></li>
+		<li><a href="/index#users"><i class="fa fa-group"></i></a></li>
+		<li><a href="/index#messages"><i class="fa fa-envelope"></i></a></li>
+		<li><a id="close-widgets-area" href="/index#"><i class="fa fa-sign-in"></i></a></li>
+	</ul>
+	 
+	<div id="myTabContent" class="tab-content">
+		<div class="tab-pane active" id="charts">
+			
+			<div class="bar-stat">
+				<span class="title">Account balance</span>
+				<span class="value">$19 999,99</span>
+				<span class="chart green">7,3,2,6,6,3,9,0,1,4</span>
+			</div>
+
+			<hr>
+
+			<div class="bar-stat">
+				<span class="title">Clients</span>
+				<span class="value">1278</span>
+				<span class="chart yellow">8,2,5,4,7,4,7,2,5,9</span>
+			</div>
+
+			<hr>
+
+			<div class="bar-stat">
+				<span class="title">Orders</span>
+				<span class="value">5876</span>
+				<span class="chart blue">2,4,6,8,3,5,9,3,2,2</span>
+			</div>
+
+			<hr>
+
+			<div class="bar-stat">
+				<span class="title">Messages</span>
+				<span class="value">673</span>
+				<span class="chart red">0,3,3,8,3,3,2,7,8,4</span>
+			</div>
+			
+			<hr>
+			
+			<div id="cpu-usage"></div>
+			
+			<ul class="progress-bars">
+				
+				<li>
+					<span class="title">Free Memory</span>
+					<span class="percent"></span>
+					<div class="taskProgress progressSlim progressGreen">80</div>
+				</li>
+				
+				<li>
+					<span class="title">Free HDD Drive</span>
+					<span class="percent"></span>
+					<div class="taskProgress progressSlim progressYellow">20</div>
+				</li>
+				
+				<li>
+					<span class="title">Free SSD Drive</span>
+					<span class="percent"></span>
+					<div class="taskProgress progressSlim progressBlue">57</div>
+				</li>
+				
+				<li>
+					<span class="title">Transfer</span>
+					<span class="percent"></span>
+					<div class="taskProgress progressSlim progressRed">45</div>
+				</li>	
+				
+			</ul>	
+
+		</div>
+		<div class="tab-pane" id="users">
+			
+			<ul class="users-list">
+            	<li>
+                    <a href="/index#">
+						<span class="status active"></span>
+						<span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar.jpg" alt="Avatar"></span>
+						<span class="name">santex</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index#">
+						<span class="status busy"></span>
+						<span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar2.jpg" alt="Avatar"></span>
+						<span class="name">Megan Abott</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index#">
+						<span class="status disable"></span>
+						<span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar3.jpg" alt="Avatar"></span>
+						<span class="name">Kate Ross</span>
+                    </a>
+                </li>
+				<li>
+                    <a href="/index#">
+						<span class="status active"></span>
+						<span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar4.jpg" alt="Avatar"></span>
+						<span class="name">Julie Blank</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index#">
+						<span class="status"></span>
+						<span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar5.jpg" alt="Avatar"></span>
+						<span class="name">Jane Sanders</span>
+                    </a>
+                </li>
+				<li>
+            		<a href="/index#">View all users</a>
+				</li>	
+			</ul>
+
+		</div>
+		<div class="tab-pane" id="messages">
+			
+			<ul class="messages-list">
+            	<li>
+                    <a href="/index#">
+						<div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar.jpg" alt="Avatar"></div>
+						<span class="name">santex</span>
+						<span class="date">25/6/2013</span>
+						<span class="title">Custom Bootstrap design for new client</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index#">
+						<div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar2.jpg" alt="Avatar"></div>
+						<span class="name">Megan Abott</span>
+						<span class="date">25/6/2013</span>
+						<span class="title">Custom Bootstrap design for new client</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index#">
+						<div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar3.jpg" alt="Avatar"></div>
+						<span class="name">Kate Ross</span>
+						<span class="date">25/6/2013</span>
+						<span class="title">Custom Bootstrap design for new client</span>
+                    </a>
+                </li>
+				<li>
+                    <a href="/index#">
+						<div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar4.jpg" alt="Avatar"></div>
+						<span class="name">Julie Blank</span>
+						<span class="date">25/6/2013</span>
+						<span class="title">Custom Bootstrap design for new client</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index#">
+						<div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar5.jpg" alt="Avatar"></div>
+						<span class="name">Jane Sanders</span>
+						<span class="date">25/6/2013</span>
+						<span class="title">Custom Bootstrap design for new client</span>
+                    </a>
+                </li>
+				<li>
+            		<a href="/index#">View all messages</a>
+				</li>	
+			</ul>
+
+		</div>
+	</div>
+			
+</div>
+<!-- end: Widgets Area -->
+
+<a id="widgets-area-button" class="hidden-sm hidden-xs open"><i class="fa fa-bars"></i></a>				
+				</div><!--/row-->
+		
+		<div class="modal fade" id="myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						<p>Here settings can be configured...</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+	</div><!--/container-->
+	
+		
+		
+	
+	<div class="clearfix"></div>
+	<footer>
+		<p>
+			<span style="text-align:left;float:left">&copy; 2014 santex. <a href="/">War-room</a> by santex@c3d2.de</span>
+			<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="/" alt="War-room">micro-structures</a></span>
+		</p>
+	</footer>
+		<!-- start: JavaScript-->
+	<!--[if !IE]>-->
+
+			<script src="/bootstrap/js/jquery-2.0.3.min.js"></script>
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+	
+		<script src="/bootstrap/js/jquery-1.10.2.min.js"></script>
+	
+	<![endif]-->
+
+	<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='/bootstrap/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+var chart = new SmoothieChart({millisPerPixel:86,grid:{fillStyle:'rgba(0,0,0,0.36)',sharpLines:true,millisPerLine:5000,verticalSections:9},timestampFormatter:SmoothieChart.timeFormatter,horizontalLines:[{color:'#ffffff',lineWidth:1,value:0},{color:'#880000',lineWidth:2,value:3333},{color:'#880000',lineWidth:2,value:-3333}]}),
+    canvas = document.getElementById('smoothie-chart'),
+    series = new TimeSeries();
+
+chart.addTimeSeries(series, {lineWidth:1.5,strokeStyle:'#00ff00'});
+chart.streamTo(canvas, 1999);
+			</script>
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+	
+		<script type="text/javascript">
+	 	window.jQuery || document.write("<script src='/bootstrap/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		
+	<![endif]-->
+	<script src="/bootstrap/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/bootstrap/js/bootstrap.min.js"></script>
+	
+	
+	<!-- page scripts -->
+	<script src="/bootstrap/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="/bootstrap/js/jquery.sparkline.min.js"></script>
+	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="/bootstrap/js/excanvas.min.js"></script><![endif]-->
+	<script src="/bootstrap/js/jquery.flot.min.js"></script>
+	<script src="/bootstrap/js/jquery.flot.pie.min.js"></script>
+	<script src="/bootstrap/js/jquery.flot.stack.min.js"></script>
+	<script src="/bootstrap/js/jquery.flot.resize.min.js"></script>
+	<script src="/bootstrap/js/jquery.flot.time.min.js"></script>
+	<script src="/bootstrap/js/retina.min.js"></script>
+	<script src="/bootstrap/js/raphael.min.js"></script>
+	<script src="/bootstrap/js/justgage.1.0.1.min.js"></script>
+	
+	<!-- theme scripts -->
+	<script src="/bootstrap/js/custom.min.js"></script>
+	<script src="/bootstrap/js/core.min.js"></script>
+	
+	<!-- inline scripts related to this page -->
+	<script src="/bootstrap/js/pages/index.js"></script>
+  <!-- inline scripts related to this page -->
+  <script src="/bootstrap/js/pages/charts-flot.js"></script>
+	
+	<!-- end: JavaScript-->
+	
+</body>
+</html>

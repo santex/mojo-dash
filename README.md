@@ -1,4 +1,4 @@
-mojo-dash
-=========
+Mojolicious-Bootstrap-Lite
+==========================
 
-perl mojolicio.us dashboard
+Mojolicious::Lite application using Twitter Bootstrap framework

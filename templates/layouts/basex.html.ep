@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- start: Meta -->
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="part of active-memory">
+  <meta name="author" content="santex &lt;santex@c3d2.de&gt;">
+  <meta name="keyword" content="">
+  <!-- end: Meta -->
+  <!-- start: Mobile Specific -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- end: Mobile Specific -->
+  <!-- start: CSS -->
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/bootstrap/css/style.min.css" rel="stylesheet">
+  <link href="/bootstrap/css/retina.min.css" rel="stylesheet">
+  <link href="/bootstrap/css/dropzone.css" rel="stylesheet">
+  <script src="/bootstrap/js/jquery-latest.js"></script>
+  <script src="/bootstrap/js/d3.min.js"></script>    
+  <link href="/bootstrap/css/dense.css" rel="stylesheet">
+  <!-- end: CSS -->
+  <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="/bootstrap/js/respond.min.js"></script>
+    <link href="/bootstrap/css/ie.css" rel="stylesheet">
+  <![endif]-->
+  <!--[if IE 9]>
+    <link id="ie9style" href="/bootstrap/css/ie9.css" rel="stylesheet">
+  <![endif]-->
+  <!-- start: Favicon and Touch Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/bootstrap/ico/favicon.png">
+  <!-- end: Favicon and Touch Icons -->
+  <style>
+  html{overflow:hidden;}
+  </style>
+</head>
+<body>
+    <!-- start: Header -->
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".sidebar-nav.nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><span>Active</span></a>
+        <!-- start: Header Menu -->
+        
+        <!-- end: Header Menu -->
+      </div>
+    </div>
+  </div>
+  <!-- start: Header -->
+<div class="container">
+    <div class="row">
+      <!-- start: Main Menu -->
+      <div id="sidebar-left" class="col-sm-1">
+      
+        <div class="nav-collapse sidebar-nav collapse navbar-collapse bs-navbar-collapse">
+          <ul class="nav nav-tabs nav-stacked main-menu">
+          
+            <li><a href="/"><i class="fa fa-bar-chart-o"></i><span class="hidden-sm"> PDF Analyse</span></a></li>
+            <li><a href="/text"><i class="fa fa-bar-chart-o"></i><span class="hidden-sm"> Text Analyse</span></a></li> 
+    
+            <li><a href="/widgets"><i class="fa fa-dashboard"></i><span class="hidden-sm"> Widgets</span></a></li>
+            <li><a href="/login"><i class="fa fa-lock"></i><span class="hidden-sm"> Login Page</span></a></li>            
+            
+          </ul>
+        </div>
+      </div>
+      <a id="main-menu-toggle" class="hidden-xs open"><i class="fa fa-bars"></i></a>
+      <!-- end: Main Menu -->
+      
+   <!-- start: Content -->
+   <div id="content" class="col-sm-11 row">
+   <div class="box pull-right" style="width:100%;">
+          <div class="box-header">
+            <h2><i class="fa fa-check"></i><span class="break"></span>Text Analyseis</h2>
+            <div class="box-icon">
+              <a href="/form-dropzone#" class="btn-setting"><i class="fa fa-wrench"></i></a>
+              <a href="/form-dropzone#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+              <a href="/form-dropzone#" class="btn-close"><i class="fa fa-times"></i></a>
+            </div>
+          </div>
+
+          <div class="box-content" >
+           <div class="todo">                                 
+             <div class="chat-form" style="min-height:150px;">
+              <textarea style="min-height:120px;"></textarea>
+              <p>
+              <center><button class="btn btn-info">analyse text</button></center>
+              
+
+<div id="header">
+  <div class="wrapper">
+   
+    <form id="form-source"  style="display:none;">
+      <input type="text" id="source" placeholder="URL or Twitter @handle…">
+    </form>
+
+    <form id="form">
+      <input type="text" id="keyword" placeholder="Keyword…">
+      <label for="reverse" style="font-size: small"><input id="reverse" type="checkbox"> reverse tree</label>
+      <label for="phrase-line" style="font-size: small"><input id="phrase-line" type="checkbox"> one phrase per line</label>
+    </form>
+  </div>
+</div>
+<div id="help-left">
+  Shift-click to make that word the root.
+</div>
+
+<div id="vis"></div>
+<div id="text"></div>
+<div id="heat"></div>
+
+<div class="clear"></div>
+
+<div id="help-window">
+  <div class="help-wrapper">
+    <div id="examples" class="wrapper">
+      <div class="clear"></div>
+    </div>
+  </div>
+
+  <div class="help-wrapper grey">
+    <div class="wrapper">
+      <h2>Paste Text</h2>
+      <p><textarea id="paste"></textarea>
+      <p><button id="paste-go" class="first last" >Generate WordTree!</button>
+      <label for="paste-save"><input type="checkbox" id="paste-save"> Make public for easy sharing</label>
+      
+    </div>
+  </div>
+
+  <div class="wrapper">
+    
+  </div>
+
+  <div class="help-wrapper grey credits">
+
+  </div>
+</div>
+<script>
+
+
+var Base64 = {
+ 
+	// private property
+	_keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+ 
+	// public method for encoding
+	encode : function (input) {
+		var output = "";
+		var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+		var i = 0;
+ 
+		input = Base64._utf8_encode(input);
+ 
+		while (i < input.length) {
+ 
+			chr1 = input.charCodeAt(i++);
+			chr2 = input.charCodeAt(i++);
+			chr3 = input.charCodeAt(i++);
+ 
+			enc1 = chr1 >> 2;
+			enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+			enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+			enc4 = chr3 & 63;
+ 
+			if (isNaN(chr2)) {
+				enc3 = enc4 = 64;
+			} else if (isNaN(chr3)) {
+				enc4 = 64;
+			}
+ 
+			output = output +
+			this._keyStr.charAt(enc1) + this._keyStr.charAt(enc2) +
+			this._keyStr.charAt(enc3) + this._keyStr.charAt(enc4);
+ 
+		}
+ 
+		return output;
+	},
+ 
+	// public method for decoding
+	decode : function (input) {
+		var output = "";
+		var chr1, chr2, chr3;
+		var enc1, enc2, enc3, enc4;
+		var i = 0;
+ 
+		input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+ 
+		while (i < input.length) {
+ 
+			enc1 = this._keyStr.indexOf(input.charAt(i++));
+			enc2 = this._keyStr.indexOf(input.charAt(i++));
+			enc3 = this._keyStr.indexOf(input.charAt(i++));
+			enc4 = this._keyStr.indexOf(input.charAt(i++));
+ 
+			chr1 = (enc1 << 2) | (enc2 >> 4);
+			chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+			chr3 = ((enc3 & 3) << 6) | enc4;
+ 
+			output = output + String.fromCharCode(chr1);
+ 
+			if (enc3 != 64) {
+				output = output + String.fromCharCode(chr2);
+			}
+			if (enc4 != 64) {
+				output = output + String.fromCharCode(chr3);
+			}
+ 
+		}
+ 
+		output = Base64._utf8_decode(output);
+ 
+		return output;
+ 
+	},
+ 
+	// private method for UTF-8 encoding
+	_utf8_encode : function (string) {
+		string = string.replace(/\r\n/g,"\n");
+		var utftext = "";
+ 
+		for (var n = 0; n < string.length; n++) {
+ 
+			var c = string.charCodeAt(n);
+ 
+			if (c < 128) {
+				utftext += String.fromCharCode(c);
+			}
+			else if((c > 127) && (c < 2048)) {
+				utftext += String.fromCharCode((c >> 6) | 192);
+				utftext += String.fromCharCode((c & 63) | 128);
+			}
+			else {
+				utftext += String.fromCharCode((c >> 12) | 224);
+				utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+				utftext += String.fromCharCode((c & 63) | 128);
+			}
+ 
+		}
+ 
+		return utftext;
+	},
+ 
+	// private method for UTF-8 decoding
+	_utf8_decode : function (utftext) {
+		var string = "";
+		var i = 0;
+		var c = c1 = c2 = 0;
+ 
+		while ( i < utftext.length ) {
+ 
+			c = utftext.charCodeAt(i);
+ 
+			if (c < 128) {
+				string += String.fromCharCode(c);
+				i++;
+			}
+			else if((c > 191) && (c < 224)) {
+				c2 = utftext.charCodeAt(i+1);
+				string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+				i += 2;
+			}
+			else {
+				c2 = utftext.charCodeAt(i+1);
+				c3 = utftext.charCodeAt(i+2);
+				string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+				i += 3;
+			}
+ 
+		}
+ 
+		return string;
+	}
+ 
+}
+
+var count = 0;
+function addButton() {
+  var a = document.createElement('a');
+  a.textContent = 'New' + (++count);
+  a.href = '#';
+  a.setAttribute('onclick', 'addButton()');
+  document.querySelector('nav').appendChild(a);
+  return false;
+}
+</script>
+
+	  
+		
+    
+
+<script>
+
+var examples = [];
+
+		      
+
+
+function shuffle(array) {
+  var m = array.length, t, i;
+
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
+
+d3.select("#examples").selectAll(".example")
+    .data(shuffle(examples).slice(0,10))
+  .enter().append("div").attr("class", "thumb")
+	.text(function(d) { return d.url; })
+	.attr("style","padding:5px;margin:10px;text-align:center;border: dotted #000 1px;font-weight:bold;")	
+	.append("a")
+    .attr("href", function(d) { return d.url; })
+	.attr("target","new")
+	.append("img")
+	.attr("style","padding:5px;display:block;height:100px")	
+    .attr("src", function(d) { return "app/img/ex/" + d.name + ".jpg"; 
+		
+
+});
+
+</script>
+
+
+<script src="/bootstrap/js/d3.min.js"></script>    
+<script src="/bootstrap/js/longscroll.js"></script>
+<script src="/bootstrap/js/wordtree.js"></script>
+<script src="/bootstrap/js/unicode.js"></script>
+<script src="/bootstrap/js/apps.js"></script>
+
+
+<script>
+function encode_as_img_and_link(){
+ // Add some critical information
+ $("svg").attr({ version: '1.1' , xmlns:"http://www.w3.org/2000/svg"});
+
+ var svg = $("#vid").html();
+ var b64 = Base64.encode(svg);
+
+ // Works in recent Webkit(Chrome)
+ $("body").append($("<img src='data:image/svg+xml;base64,\n"+b64+"' alt='file.svg'/>"));
+
+ // Works in Firefox 3.6 and Webit and possibly any browser which supports the data-uri
+ $("body").append($("<a href-lang='image/svg+xml' href='data:image/svg+xml;base64,\n"+b64+"' title='file.svg'>Download</a>"));
+}
+
+
+
+//setInterval(10,function{});
+
+
+
+</script>
+              </p>
+             </div>      
+            </div>
+          </div>
+        <div class="box pull-right" style="width:100%;">
+          <div class="box-header">
+            <h2><i class="fa fa-check"></i><span class="break"></span>Pdf Upload</h2>
+            <div class="box-icon">
+              <a href="/form-dropzone#" class="btn-setting"><i class="fa fa-wrench"></i></a>
+              <a href="/form-dropzone#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+              <a href="/form-dropzone#" class="btn-close"><i class="fa fa-times"></i></a>
+            </div>
+          </div>
+
+          <div class="box-content" >
+
+            <div class="alert alert-info">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              Drag & drop file upload with image preview
+            </div>
+
+            <div class="form-group">
+
+              <div class="controls">
+                  <div id="dropzone">
+                  <form action="test" class="dropzone">
+                    <div class="fallback">
+                      <input name="file" type="file" multiple="" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div><!--/col-->
+        </div><!--/col-->
+
+   </div>
+
+
+
+
+   </div>
+   <!-- end: Content -->
+
+   <!-- start: Widgets Area -->
+<div id="widgets-area" class="col-sm-2">
+
+ <ul class="nav tab-menu nav-tabs" id="myTab">
+  <li class="active"><a href="/widgets#charts"><i class="fa fa-bar-chart-o"></i></a></li>
+  <li><a href="/widgets#users"><i class="fa fa-group"></i></a></li>
+  <li><a href="/widgets#messages"><i class="fa fa-envelope"></i></a></li>
+  <li><a id="close-widgets-area" href="/widgets#"><i class="fa fa-sign-in"></i></a></li>
+ </ul>
+
+ <div id="myTabContent" class="tab-content">
+  <div class="tab-pane active" id="charts">
+
+   <div class="bar-stat">
+    <span class="title">Account balance</span>
+    <span class="value">$19 999,99</span>
+    <span class="chart green">7,3,2,6,6,3,9,0,1,4</span>
+   </div>
+
+   <hr>
+
+   <div class="bar-stat">
+    <span class="title">Clients</span>
+    <span class="value">1278</span>
+    <span class="chart yellow">8,2,5,4,7,4,7,2,5,9</span>
+   </div>
+
+   <hr>
+
+   <div class="bar-stat">
+    <span class="title">Orders</span>
+    <span class="value">5876</span>
+    <span class="chart blue">2,4,6,8,3,5,9,3,2,2</span>
+   </div>
+
+   <hr>
+
+   <div class="bar-stat">
+    <span class="title">Messages</span>
+    <span class="value">673</span>
+    <span class="chart red">0,3,3,8,3,3,2,7,8,4</span>
+   </div>
+
+   <hr>
+
+   <div id="cpu-usage"></div>
+
+   <ul class="progress-bars">
+
+    <li>
+     <span class="title">Free Memory</span>
+     <span class="percent"></span>
+     <div class="taskProgress progressSlim progressGreen">80</div>
+    </li>
+
+    <li>
+     <span class="title">Free HDD Drive</span>
+     <span class="percent"></span>
+     <div class="taskProgress progressSlim progressYellow">20</div>
+    </li>
+
+    <li>
+     <span class="title">Free SSD Drive</span>
+     <span class="percent"></span>
+     <div class="taskProgress progressSlim progressBlue">57</div>
+    </li>
+
+    <li>
+     <span class="title">Transfer</span>
+     <span class="percent"></span>
+     <div class="taskProgress progressSlim progressRed">45</div>
+    </li>
+
+   </ul>
+
+  </div>
+  <div class="tab-pane" id="users">
+
+   <ul class="users-list">
+       <li>
+          <a href="/widgets#">
+      <span class="status active"></span>
+      <span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar.jpg" alt="Avatar"></span>
+      <span class="name">santex</span>
+          </a>
+        </li>
+        <li>
+          <a href="/widgets#">
+      <span class="status busy"></span>
+      <span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar2.jpg" alt="Avatar"></span>
+      <span class="name">Megan Abott</span>
+          </a>
+        </li>
+        <li>
+          <a href="/widgets#">
+      <span class="status disable"></span>
+      <span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar3.jpg" alt="Avatar"></span>
+      <span class="name">Kate Ross</span>
+          </a>
+        </li>
+    <li>
+          <a href="/widgets#">
+      <span class="status active"></span>
+      <span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar4.jpg" alt="Avatar"></span>
+      <span class="name">Julie Blank</span>
+          </a>
+        </li>
+        <li>
+          <a href="/widgets#">
+      <span class="status"></span>
+      <span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar5.jpg" alt="Avatar"></span>
+      <span class="name">Jane Sanders</span>
+          </a>
+        </li>
+    <li>
+        <a href="/widgets#">View all users</a>
+    </li>
+   </ul>
+
+  </div>
+  <div class="tab-pane" id="messages">
+
+   <ul class="messages-list">
+       <li>
+          <a href="/widgets#">
+      <div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar.jpg" alt="Avatar"></div>
+      <span class="name">santex</span>
+      <span class="date">25/6/2013</span>
+      <span class="title">Custom Bootstrap design for new client</span>
+          </a>
+        </li>
+        <li>
+          <a href="/widgets#">
+      <div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar2.jpg" alt="Avatar"></div>
+      <span class="name">Megan Abott</span>
+      <span class="date">25/6/2013</span>
+      <span class="title">Custom Bootstrap design for new client</span>
+          </a>
+        </li>
+        <li>
+          <a href="/widgets#">
+      <div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar3.jpg" alt="Avatar"></div>
+      <span class="name">Kate Ross</span>
+      <span class="date">25/6/2013</span>
+      <span class="title">Custom Bootstrap design for new client</span>
+          </a>
+        </li>
+    <li>
+          <a href="/widgets#">
+      <div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar4.jpg" alt="Avatar"></div>
+      <span class="name">Julie Blank</span>
+      <span class="date">25/6/2013</span>
+      <span class="title">Custom Bootstrap design for new client</span>
+          </a>
+        </li>
+        <li>
+          <a href="/widgets#">
+      <div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar5.jpg" alt="Avatar"></div>
+      <span class="name">Jane Sanders</span>
+      <span class="date">25/6/2013</span>
+      <span class="title">Custom Bootstrap design for new client</span>
+          </a>
+        </li>
+    <li>
+        <a href="/widgets#">View all messages</a>
+    </li>
+   </ul>
+
+  </div>
+ </div>
+
+</div>
+<!-- end: Widgets Area -->
+
+<a id="widgets-area-button" class="hidden-sm hidden-xs open"><i class="fa fa-bars"></i></a>
+    </div><!--/row-->
+
+  <div class="modal fade" id="myModal">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title">Modal title</h4>
+     </div>
+     <div class="modal-body">
+      <p>Here settings can be configured...</p>
+     </div>
+     <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+     </div>
+    </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+ </div><!--/container-->
+
+
+
+
+ <div class="clearfix"></div>
+
+
+
+ <!-- start: JavaScript-->
+ <!--[if !IE]>-->
+
+   <script src="/bootstrap/js/jquery-2.0.3.min.js"></script>
+
+ <!--<![endif]-->
+
+ <!--[if IE]>
+
+  <script src="/bootstrap/js/jquery-1.10.2.min.js"></script>
+
+ <![endif]-->
+
+ <!--[if !IE]>-->
+
+  <script type="text/javascript">
+   window.jQuery || document.write("<script src='/bootstrap/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+   </script>
+
+ <!--<![endif]-->
+
+ <!--[if IE]>
+
+  <script type="text/javascript">
+  window.jQuery || document.write("<script src='/bootstrap/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+  </script>
+
+ <![endif]-->
+ <script src="/bootstrap/js/jquery-migrate-1.2.1.min.js"></script>
+ <script src="/bootstrap/js/bootstrap.min.js"></script>
+
+
+ <!-- page scripts -->
+ <script src="/bootstrap/js/jquery-ui-1.10.3.custom.min.js"></script>
+ <script src="/bootstrap/js/jquery.sparkline.min.js"></script>
+ <script src="/bootstrap/js/jquery.autosize.min.js"></script>
+ <script src="/bootstrap/js/jquery.placeholder.min.js"></script>
+ <script src="/bootstrap/js/fullcalendar.min.js"></script>
+ <script src="/bootstrap/js/raphael.min.js"></script>
+ <script src="/bootstrap/js/justgage.1.0.1.min.js"></script>
+
+ <!-- theme scripts -->
+ <script src="/bootstrap/js/custom.min.js"></script>
+ <script src="/bootstrap/js/core.min.js"></script>
+
+ <!-- inline scripts related to this page -->
+ <script src="/bootstrap/js/pages/widgets.js"></script>
+
+ <!-- end: JavaScript-->
+<script>
+$( ".box-content" ).each(function() {
+//$(this).toggle();
+
+});
+
+
+</script>
+</body>
+</html>
+
+
+
+
+			<!-- end: Content -->
+			      <!-- start: Widgets Area -->
+<div id="widgets-area" class="col-sm-2">
+  <ul class="nav tab-menu nav-tabs" id="myTab">
+    <li class="active"><a href="/#charts"><i class="fa fa-bar-chart-o"></i></a></li>
+    <li><a href="/#users"><i class="fa fa-group"></i></a></li>
+    <li><a href="/#messages"><i class="fa fa-envelope"></i></a></li>
+    <li><a id="close-widgets-area" href="/#"><i class="fa fa-sign-in"></i></a></li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane active" id="charts">
+      <div class="bar-stat">
+        <span class="title">Account balance</span>
+        <span class="value">$19 999,99</span>
+        <span class="chart green">7,3,2,6,6,3,9,0,1,4</span>
+      </div>
+      <hr>
+      <div class="bar-stat">
+        <span class="title">Clients</span>
+        <span class="value">1278</span>
+        <span class="chart yellow">8,2,5,4,7,4,7,2,5,9</span>
+      </div>
+      <hr>
+      <div class="bar-stat">
+        <span class="title">Orders</span>
+        <span class="value">5876</span>
+        <span class="chart blue">2,4,6,8,3,5,9,3,2,2</span>
+      </div>
+      <hr>
+      <div class="bar-stat">
+        <span class="title">Messages</span>
+        <span class="value">673</span>
+        <span class="chart red">0,3,3,8,3,3,2,7,8,4</span>
+      </div>
+      <hr>
+      <div id="cpu-usage"></div>
+      <ul class="progress-bars">
+        <li>
+          <span class="title">Free Memory</span>
+          <span class="percent"></span>
+          <div class="taskProgress progressSlim progressGreen">80</div>
+        </li>
+        <li>
+          <span class="title">Free HDD Drive</span>
+          <span class="percent"></span>
+          <div class="taskProgress progressSlim progressYellow">20</div>
+        </li>
+        <li>
+          <span class="title">Free SSD Drive</span>
+          <span class="percent"></span>
+          <div class="taskProgress progressSlim progressBlue">57</div>
+        </li>
+        <li>
+          <span class="title">Transfer</span>
+          <span class="percent"></span>
+          <div class="taskProgress progressSlim progressRed">45</div>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-pane" id="users">
+      <ul class="users-list">
+              <li>
+                    <a href="/base#">
+            <span class="status active"></span>
+            <span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar.jpg" alt="Avatar"></span>
+            <span class="name">santex</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/base#">
+            <span class="status busy"></span>
+            <span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar2.jpg" alt="Avatar"></span>
+            <span class="name">Megan Abott</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/base#">
+            <span class="status disable"></span>
+            <span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar3.jpg" alt="Avatar"></span>
+            <span class="name">Kate Ross</span>
+                    </a>
+                </li>
+        <li>
+                    <a href="/base#">
+            <span class="status active"></span>
+            <span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar4.jpg" alt="Avatar"></span>
+            <span class="name">Julie Blank</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/base#">
+            <span class="status"></span>
+            <span class="avatar"><img class="img-circle" src="/bootstrap/img/avatar5.jpg" alt="Avatar"></span>
+            <span class="name">Jane Sanders</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/base#">View all users</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-pane" id="messages">
+      <ul class="messages-list">
+              <li>
+                    <a href="/base#">
+            <div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar.jpg" alt="Avatar"></div>
+            <span class="name">santex</span>
+            <span class="date">25/6/2013</span>
+            <span class="title">Custom Bootstrap design for new client</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/base#">
+            <div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar2.jpg" alt="Avatar"></div>
+            <span class="name">Megan Abott</span>
+            <span class="date">25/6/2013</span>
+            <span class="title">Custom Bootstrap design for new client</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/base#">
+            <div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar3.jpg" alt="Avatar"></div>
+            <span class="name">Kate Ross</span>
+            <span class="date">25/6/2013</span>
+            <span class="title">Custom Bootstrap design for new client</span>
+                    </a>
+                </li>
+        <li>
+                    <a href="/base#">
+            <div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar4.jpg" alt="Avatar"></div>
+            <span class="name">Julie Blank</span>
+            <span class="date">25/6/2013</span>
+            <span class="title">Custom Bootstrap design for new client</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/base#">
+            <div class="avatar"><img class="img-circle" src="/bootstrap/img/avatar5.jpg" alt="Avatar"></div>
+            <span class="name">Jane Sanders</span>
+            <span class="date">25/6/2013</span>
+            <span class="title">Custom Bootstrap design for new client</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/base#">View all messages</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end: Widgets Area -->
+<a id="widgets-area-button" class="hidden-sm hidden-xs open"><i class="fa fa-bars"></i></a>
+        </div><!--/row-->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>Here settings can be configured...</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  <div class="clearfix"></div>
+  
+<footer style="margin-top:50px;">
+    <p>
+      <span="text-align:left;float:left">santex@c3d2.de <a href="/">War-room</a> by santex</span>
+      <span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="/" alt="War-room">active-memory  santex</a></span>
+    </p>
+  </footer>
+  <!-- start: JavaScript-->
+  <!--[if !IE]>-->
+      <script src="/bootstrap/js/jquery-2.0.3.min.js"></script>
+  <!--<![endif]-->
+  <!--[if IE]>
+<script src="/bootstrap/js/jquery-1.10.2.min.js"></script>
+  <![endif]-->
+  <!--[if !IE]>-->
+    <script type="text/javascript">
+      window.jQuery || document.write("<script src='/bootstrap/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+      </script>
+  <!--<![endif]-->
+  <!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='/bootstrap/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+    </script>
+  <![endif]-->
+	<script src="/bootstrap/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<!-- page scripts -->
+	<script src="/bootstrap/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="/bootstrap/js/jquery.sparkline.min.js"></script>
+	<script src="/bootstrap/js/dropzone.min.js"></script>
+	<script src="/bootstrap/js/raphael.min.js"></script>
+	<script src="/bootstrap/js/justgage.1.0.1.min.js"></script>
+
+	<!-- theme scripts -->
+	<script src="/bootstrap/js/custom.min.js"></script>
+	<script src="/bootstrap/js/core.min.js"></script>
+
+
+
+
+</body>
+</html>

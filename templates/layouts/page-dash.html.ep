@@ -1,0 +1,431 @@
+<a id="main-menu-toggle" class="hidden-xs open"><i class="fa fa-bars"></i></a>
+			<!-- end: Main Menu -->
+
+
+
+<a class="loader" href="/index#calendar">country</a>
+
+                  
+<script type="text/javascript">
+$(function() {
+    $('.loader').click(function(event) {
+        event.preventDefault();
+        $('#content').load($(this).attr('href').replace("/index#",""));
+    }); 
+});
+</script>
+			
+			<!-- start: Content -->
+			<div id="content" class="col-sm-11">
+			
+			<div class="row">
+        
+				<div class="stats-date col-md-3">
+					<div>Monthly Statistics</div>
+					<div class="range">02/10/2012 - 02/11/2012</div>
+				</div><!--/col-->
+				
+				<div class="stats col-md-9">
+					
+					<div class="stat">
+						<div class="left">
+							<div class="number green">1.324.996</div>
+							<div class="title"><span class="color green"></span> Visits</div>
+						</div>
+						<div class="right">	
+							<div class="arrow">
+								<img src="/bootstrap/img/uparrow.png">
+							</div>
+							<div class="percent">+13%</div>
+						</div>
+					</div>
+					
+					<div class="stat">
+						<div class="left">
+							<div class="number yellow">12.894.765</div>
+							<div class="title"><span class="color yellow"></span> Pageviews</div>
+						</div>
+						<div class="right">	
+							<div class="arrow">
+								<img src="/bootstrap/img/uparrow.png">
+							</div>
+							<div class="percent">+17%</div>
+						</div>
+					</div>
+					
+					<div class="stat">
+						<div class="left">
+							<div class="number blue">432.980</div>
+							<div class="title"><span class="color blue"></span>Visitors</div>
+						</div>
+						<div class="right">	
+							<div class="arrow">
+								<img src="/bootstrap/img/downarrow.png">
+							</div>
+							<div class="percent">-33%</div>
+						</div>
+					</div>
+					
+					<div class="stat">
+						<div class="left">
+							<div class="number red">11.324</div>
+							<div class="title"><span class="color red"></span>New Visitors</div>
+						</div>
+						<div class="right">	
+							<div class="arrow">
+								<img src="/bootstrap/img/uparrow.png">
+							</div>
+							<div class="percent">+3%</div>
+						</div>
+					</div>
+						
+				</div><!--/col-->
+			
+			</div><!--/row-->	
+
+			<div class="row">
+				
+				<div class="col-xs-12 overflow:hidden">
+				
+					<div id="stats-chart2" style="height:100px;" ></div>
+				
+				</div><!--/col-->	
+			
+			</div><!--/row-->
+			
+			<hr>
+			
+			<div class="row">
+				
+				<div class="widget col-md-5 col-sm-12">
+					
+					<h2><i class="glyphicons globe"></i> Demographics</h2>
+					
+					<hr>
+					
+					<div class="content">
+						
+						<div class="verticalChart">
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>37%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">US</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>16%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">PL</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>12%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">GB</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>9%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">DE</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>7%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">NL</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>6%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">CA</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>5%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">FI</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>4%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">RU</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>3%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">AU</div>
+							
+							</div>
+							
+							<div class="singleBar">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>1%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">N/A</div>
+							
+							</div>	
+							
+						</div>
+					
+					</div>
+					
+				</div><!--/col-->
+				
+				<div class="widget col-md-3 col-sm-6">
+					
+					<h2><span class="glyphicons pie_chart"><i></i></span> Browsers</h2>
+					
+					<hr>
+					
+					<div class="content">
+						
+						<div class="browserStat big">
+							<img src="/bootstrap/img/browser-chrome-big.png" alt="Chrome">
+							<span>34%</span>
+						</div>
+						<div class="browserStat big">
+							<img src="/bootstrap/img/browser-firefox-big.png" alt="Firefox">
+							<span>34%</span>
+						</div>
+						<div class="browserStat">
+							<img src="/bootstrap/img/browser-ie.png" alt="Internet Explorer">
+							<span>34%</span>
+						</div>
+						<div class="browserStat">
+							<img src="/bootstrap/img/browser-safari.png" alt="Safari">
+							<span>34%</span>
+						</div>
+						<div class="browserStat">
+							<img src="/bootstrap/img/browser-opera.png" alt="Opera">
+							<span>34%</span>
+						</div>	
+								
+						
+					</div>
+				</div><!--/col-->
+				
+				<div class="widget col-md-4 col-sm-6">
+					<h2><span class="glyphicons charts"><i></i></span> Weekly Stat</h2>
+					
+					<hr>
+					
+					<div class="content">
+						<div class="sparkLineStats">
+
+	                        <ul class="unstyled">
+	                            
+	                            <li>
+									<div class="sparkLineStats3"></div> 
+	                                Pageviews: 
+	                                <span class="number">781</span>
+	                            </li>
+	                            <li>
+									<div class="sparkLineStats4"></div>
+	                                Pages / Visit: 
+	                                <span class="number">2,19</span>
+	                            </li>
+	                            <li>
+									<div class="sparkLineStats5"></div>
+	                                Avg. Visit Duration: 
+	                                <span class="number">00:02:58</span>
+	                            </li>
+	                            <li>
+									<div class="sparkLineStats6"></div>
+	                                Bounce Rate: <span class="number">59,83%</span>
+	                            </li>
+	                            <li>
+									<div class="sparkLineStats7"></div>
+	                                % New Visits: 
+	                                <span class="number">70,79%</span>
+	                            </li>
+	                            <li>
+									<div class="sparkLineStats8"></div>
+	                                % Returning Visitor: 
+	                                <span class="number">29,21%</span>
+	                            </li>
+
+	                        </ul>
+	
+	                    </div><!-- End .sparkStats -->
+					</div>
+				</div><!--/col-->
+			
+			</div><!--/row-->
+			
+			<hr>
+			
+			<div class="row">
+				
+				<div class="widget col-sm-6 overflow:hidden">
+					<h2><span class="social facebook"><i></i></span>Facebook Fans</h2>
+					<hr>
+					<div class="content">
+						<div id="facebookChart" style="height:100px;" ></div>
+					</div>
+				</div><!--/col-->
+				
+				<div class="widget col-sm-6 overflow:hidden">
+					<h2><span class="social twitter"><i></i></span>Twitter Followers</h2>
+					<hr>
+					<div class="content">
+						<div id="twitterChart" style="height:100px;" ></div>
+					</div>
+				</div><!--/col-->
+			
+			</div><!--/row-->
+
+				
+			
+       
+					
+			</div>
+			<!-- end: Content -->
+			
+	
+	<div class="clearfix"></div>
+	<footer>
+		<p>
+			<span style="text-align:left;float:left">&copy; 2014 santex. <a href="/">War-room</a> by santex@c3d2.de</span>
+			<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="/" alt="War-room">micro-structures</a></span>
+		</p>
+	</footer>
+		<!-- start: JavaScript-->
+	<!--[if !IE]>-->
+
+			<script src="/bootstrap/js/jquery-2.0.3.min.js"></script>
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+	
+		<script src="/bootstrap/js/jquery-1.10.2.min.js"></script>
+	
+	<![endif]-->
+
+	<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='/bootstrap/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			</script>
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+	
+		<script type="text/javascript">
+	 	window.jQuery || document.write("<script src='/bootstrap/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		
+	<![endif]-->
+	<script src="/bootstrap/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/bootstrap/js/bootstrap.min.js"></script>
+	
+	
+	<!-- page scripts -->
+	<script src="/bootstrap/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="/bootstrap/js/jquery.sparkline.min.js"></script>
+	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="/bootstrap/js/excanvas.min.js"></script><![endif]-->
+	<script src="/bootstrap/js/jquery.flot.min.js"></script>
+	<script src="/bootstrap/js/jquery.flot.pie.min.js"></script>
+	<script src="/bootstrap/js/jquery.flot.stack.min.js"></script>
+	<script src="/bootstrap/js/jquery.flot.resize.min.js"></script>
+	<script src="/bootstrap/js/jquery.flot.time.min.js"></script>
+	<script src="/bootstrap/js/retina.min.js"></script>
+	<script src="/bootstrap/js/raphael.min.js"></script>
+	<script src="/bootstrap/js/justgage.1.0.1.min.js"></script>
+	
+	<!-- theme scripts -->
+	<script src="/bootstrap/js/custom.min.js"></script>
+	<script src="/bootstrap/js/core.min.js"></script>
+	
+	<!-- inline scripts related to this page -->
+	<script src="/bootstrap/js/pages/index.js"></script>
+  <!-- inline scripts related to this page -->
+  <script src="/bootstrap/js/pages/charts-flot.js"></script>
+	
+	<!-- end: JavaScript-->
+	
+</body>
+</html>
